@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lorem Ipsum Generator</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- Custom CSS -->
+    <style>
+      .gradient-bg {
+        background: linear-gradient(
+          90deg,
+          #ff3366 0%,
+          #ff5e62 50%,
+          #ff8c66 100%
+        );
+        color: white;
+        padding: 3rem 0;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .hero-title {
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 1.2;
+      }
+
+      .hero-text {
+        font-size: 1rem;
+        max-width: 450px;
+      }
+
+      .robot-container {
+        position: relative;
+      }
+
+      .circle-bg {
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .stats-card {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        padding: 2rem;
+        text-align: center;
+        height: 100%;
+      }
+
+      .stats-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .stats-text {
+        font-size: 1rem;
+        color: #333;
+      }
+
+      .partners-container {
+        background-color: white;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+
+      .partner-logo {
+        height: 40px;
+        object-fit: contain;
+      }
+
+      .section-title {
+        text-align: center;
+        color: #ff5e62;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 3rem 0;
+      }
+
+      .stats-row {
+        margin-top: 2rem;
+      }
+
+      .stats-card.blue {
+        background-color: #e6efff;
+      }
+
+      .stats-card.pink {
+        background-color: #ffe6e6;
+      }
+
+      .stats-card.green {
+        background-color: #e6ffef;
+      }
+
+      .stats-card.yellow {
+        background-color: #fffde6;
+      }
+
+      .case-study-section {
+        margin: 4rem 0;
+      }
+
+      .case-study-title {
+        color: #ff6633;
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .case-study-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .case-study-logo {
+        height: 50px;
+        margin-bottom: 1rem;
+      }
+
+      .case-study-heading {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .case-study-text {
+        color: #555;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+
+      .case-study-btn {
+        display: inline-flex;
+        align-items: center;
+        background-color: white;
+        color: #333;
+        border: 1px solid #f05528;
+        border-radius: 30px;
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+      }
+
+      .case-study-btn:hover {
+        background-color: #f8f8f8;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .case-study-btn .arrow {
+        margin-left: 0.5rem;
+        color: #ff6633;
+      }
+
+      .app-screenshot {
+        max-width: 100%;
+        height: auto;
+      }
+      .phones-container {
+        position: relative;
+        height: 400px;
+        margin-top: 20px;
+      }
+
+      .phone-small {
+        position: absolute;
+        width: 170px;
+        border-radius: 20px;
+        z-index: 1;
+        left: 20%;
+        top: 50px;
+      }
+
+      .phone-large {
+        position: absolute;
+        width: 200px;
+        border-radius: 20px;
+        z-index: 2;
+        left: 40%;
+        top: 20px;
+      }
+      .product-req-section {
+        margin: 5rem 0;
+        background-image: url("./image/background-product.svg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px;
+        padding: 4rem 3rem;
+        position: relative;
+
+        min-height: 350px;
+      }
+
+      .product-req-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+        color: #000;
+      }
+
+      .product-req-title span {
+        display: block;
+        line-height: 1.4;
+      }
+
+      .read-more-btn {
+        display: inline-flex;
+        align-items: center;
+        background-color: white;
+        color: #333;
+        border: 1px solid #ddd;
+        border-radius: 30px;
+        padding: 0.6rem 1.8rem;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .read-more-btn:hover {
+        background-color: #f8f8f8;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .read-more-btn .arrow {
+        margin-left: 0.5rem;
+      }
+      .card-product-req {
+        position: relative;
+      }
+      .contact-phone {
+        max-width: 400px;
+        border-radius: 30px;
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translate(-50%, -50%);
+      }
+      .services-section {
+        padding: 4rem 0;
+      }
+
+      .card-services {
+        border-radius: 10px;
+        padding: 2rem;
+        height: 100%;
+        transition: all 0.3s ease;
+        border: none;
+      }
+
+      .card-services:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .heading-card {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+      }
+
+      .case-study-btn {
+        display: inline-flex;
+        align-items: center;
+        background-color: white;
+        color: #000;
+
+        border-radius: 30px;
+        padding: 0.6rem 1.8rem;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        width: fit-content;
+      }
+
+      .case-study-btn:hover {
+        background-color: #f8f8f8;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .case-study-btn .arrow {
+        margin-left: 0.5rem;
+        color: #ff6633;
+      }
+
+      .service-card.pink {
+        background-color: #fff0ee;
+      }
+
+      .service-card.blue {
+        background-color: #eef5ff;
+      }
+
+      .service-card.green {
+        background-color: #eefff5;
+      }
+
+      .service-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .service-icon.pink {
+        color: #ff6633;
+      }
+
+      .service-icon.blue {
+        color: #3366ff;
+      }
+
+      .service-icon.green {
+        color: #33cc99;
+      }
+
+      .service-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .service-text {
+        color: #666;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+
+      .read-more {
+        display: inline-flex;
+        align-items: center;
+        color: #333;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .read-more .arrow {
+        margin-left: 0.5rem;
+        transition: transform 0.3s ease;
+      }
+
+      .read-more:hover .arrow {
+        transform: translateX(3px);
+      }
+      .testimonial-section {
+        padding: 4rem 0;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-align: center;
+        color: #ff6633;
+        margin-bottom: 3rem;
+      }
+
+      .testimonial-card {
+        background-color: white;
+        padding: 1.5rem 1rem;
+        height: 100%;
+        position: relative;
+      }
+
+      .card-divider {
+        height: 3px;
+        background-color: #ffd700;
+        width: 100%;
+        margin-bottom: 1.5rem;
+      }
+
+      .rating {
+        color: #ff6633;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .quote-icon {
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+        color: #ffd700;
+        opacity: 0.5;
+        font-size: 2rem;
+      }
+
+      .testimonial-text {
+        color: #555;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        min-height: 100px;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+      }
+
+      .author-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 1rem;
+        object-fit: cover;
+      }
+
+      .author-info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .author-name {
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .author-title {
+        color: #777;
+        font-size: 0.8rem;
+      }
+
+      .swiper {
+        width: 100%;
+        padding-bottom: 3rem;
+      }
+
+      .swiper-pagination {
+        bottom: 0;
+      }
+
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: #ff6633;
+      }
+      .banner-driving {
+            background: linear-gradient(to right, #f58634, #ffcc33);
+            color: white;
+            padding: 50px 0;
+        }
+        .banner-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            color: #fff;
+        }
+        .btn-custom {
+            background-color: white;
+            color: #f58634;
+            border-radius: 30px;
+            padding: 10px 20px;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #ffcc33;
+            color: white;
+        }
+        .phone-image {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+      @media (max-width: 768px) {
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .testimonial-card {
+          padding: 1.5rem 1rem;
+        }
+        .partners-container {
+          overflow-x: auto;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+          /* Firefox */
+          -ms-overflow-style: none;
+          /* IE and Edge */
+        }
+        .contact-phone {
+          display: none;
+        }
+        .partners-container::-webkit-scrollbar {
+          display: none;
+          /* Chrome, Safari and Opera */
+        }
+
+        .hero-title {
+          font-size: 1.8rem;
+          line-height: 1.3;
+        }
+
+        .app-screenshot {
+          max-width: 50%;
+          height: auto;
+        }
+        .phone-small {
+          width: 150px;
+          left: 10%;
+        }
+
+        .phone-large {
+          width: 180px;
+          left: 30%;
+        }
+        .phones-container {
+          height: 330px;
+        }
+        .section-title {
+          font-size: 1.8rem;
+        }
+
+        .card {
+          padding: 1.5rem;
+        }
+
+        .service-title {
+          font-size: 1rem;
+        }
+
+        .service-text {
+          font-size: 0.8rem;
+        }
+
+        .read-more {
+          font-size: 0.7rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero-title {
+          font-size: 1.5rem;
+          line-height: 1.4;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container my-5">
+      <!-- Hero Section -->
+      <div class="gradient-bg mb-5">
+        <div class="container py-4">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h1 class="hero-title mb-4">
+                Learn How to Quickly Generate Placehder Text Using a Lorem Ipsum
+                Tool
+              </h1>
+              <p class="hero-text">
+                For over a decade, we've helped startups, nonprofits, and
+                corporations build, ship, and launch products that scale their
+                businesses
+              </p>
+            </div>
+            <div class="col-lg-6 robot-container">
+              <div class="circle-bg"></div>
+              <img
+                src="./image/ai_header.svg"
+                alt="Robot illustration"
+                class="img-fluid"
+                style="
+                  max-height: 400px;
+                  object-fit: contain;
+                  position: relative;
+                  z-index: 2;
+                "
+              />
+            </div>
+          </div>
+
+          <!-- Partners Section -->
+          <div class="partners-container">
+            <img
+              src="./image/icon-1-header.svg"
+              alt="Partner 1"
+              class="partner-logo"
+            />
+            <img
+              src="./image/icon-2-header.svg"
+              alt="Partner 2"
+              class="partner-logo"
+            />
+            <img
+              src="./image/icon-3-header.svg"
+              alt="Partner 3"
+              class="partner-logo"
+            />
+            <img
+              src="./image/icon-4-header.svg"
+              alt="Partner 4"
+              class="partner-logo"
+            />
+            <img
+              src="./image/icon-5-header.svg"
+              alt="Partner 5"
+              class="partner-logo"
+            />
+            <img
+              src="./image/icon-6-header.svg"
+              alt="Partner 6"
+              class="partner-logo"
+            />
+            <img
+              src="./image/icon-7-header.svg"
+              alt="Partner 7"
+              class="partner-logo"
+            />
+            <img
+              src="./image/icon-8-header.svg"
+              alt="Partner 8"
+              class="partner-logo"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Section -->
+      <h2 class="section-title">Learn How to Quickly Generate</h2>
+
+      <div class="row stats-row g-4">
+        <div class="col-md-3">
+          <div class="stats-card blue">
+            <div class="stats-number">400+</div>
+            <div class="stats-text">Worldwide Clients</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card pink">
+            <div class="stats-number">2 M+</div>
+            <div class="stats-text">Professional Staffs</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card green">
+            <div class="stats-number">16 k+</div>
+            <div class="stats-text">Project worldwide</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card yellow">
+            <div class="stats-number">95 %</div>
+            <div class="stats-text">Star Rated Reviews</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-study-section">
+        <h2 class="case-study-title">Made by TheApp4U</h2>
+
+        <div class="case-study-card">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <img
+                src="./image/icon-logo-the-app.svg"
+                alt="OTU Logo"
+                class="case-study-logo"
+              />
+              <h3 class="case-study-heading">Text Using a Lorem Ipsum Tool</h3>
+              <p class="case-study-text">
+                Reference site about Lorem Ipsum, giving information on its
+                origins, as well as a random Lorem generator, giving information
+                on its origins, as well as a random Lorem generator, giving
+                information on its origins, as well as a random Lorem generator,
+                giving information on its origins, as well as a random Lorem
+                generator.
+              </p>
+              <button class="case-study-btn">
+                Read the case study
+                <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
+              </button>
+            </div>
+            <div class="col-lg-6">
+              <div class="phones-container">
+                <!-- Background phone (smaller) -->
+                <img
+                  src="./image//phone-small-the-app.svg"
+                  alt="Mobile App Screenshot Background"
+                  class="phone-small"
+                />
+
+                <!-- Foreground phone (larger) -->
+                <img
+                  src="./image//phone-big-the-app.svg"
+                  alt="Mobile App Screenshot Foreground"
+                  class="phone-large"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="case-study-section">
+        <div class="case-study-card">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <img
+                src="./image/icon-logo-the-app.svg"
+                alt="OTU Logo"
+                class="case-study-logo"
+              />
+              <h3 class="case-study-heading">Text Using a Lorem Ipsum Tool</h3>
+              <p class="case-study-text">
+                Reference site about Lorem Ipsum, giving information on its
+                origins, as well as a random Lorem generator, giving information
+                on its origins, as well as a random Lorem generator, giving
+                information on its origins, as well as a random Lorem generator,
+                giving information on its origins, as well as a random Lorem
+                generator.
+              </p>
+              <button class="case-study-btn">
+                Read the case study
+                <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
+              </button>
+            </div>
+            <div class="col-lg-6">
+              <div class="phones-container">
+                <!-- Background phone (smaller) -->
+                <img
+                  src="./image//phone-small-the-app.svg"
+                  alt="Mobile App Screenshot Background"
+                  class="phone-small"
+                />
+
+                <!-- Foreground phone (larger) -->
+                <img
+                  src="./image//phone-big-the-app.svg"
+                  alt="Mobile App Screenshot Foreground"
+                  class="phone-large"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="case-study-section">
+        <div class="case-study-card">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <img
+                src="./image/icon-logo-the-app.svg"
+                alt="OTU Logo"
+                class="case-study-logo"
+              />
+              <h3 class="case-study-heading">Text Using a Lorem Ipsum Tool</h3>
+              <p class="case-study-text">
+                Reference site about Lorem Ipsum, giving information on its
+                origins, as well as a random Lorem generator, giving information
+                on its origins, as well as a random Lorem generator, giving
+                information on its origins, as well as a random Lorem generator,
+                giving information on its origins, as well as a random Lorem
+                generator.
+              </p>
+              <button class="case-study-btn">
+                Read the case study
+                <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
+              </button>
+            </div>
+            <div class="col-lg-6">
+              <div class="phones-container">
+                <!-- Background phone (smaller) -->
+                <img
+                  src="./image//phone-small-the-app.svg"
+                  alt="Mobile App Screenshot Background"
+                  class="phone-small"
+                />
+
+                <!-- Foreground phone (larger) -->
+                <img
+                  src="./image//phone-big-the-app.svg"
+                  alt="Mobile App Screenshot Foreground"
+                  class="phone-large"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product Requirements Document Section -->
+      <div class="product-req-section">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h2 class="product-req-title">
+              <span>Product</span>
+              <span>Requirements</span>
+              <span>Document</span>
+            </h2>
+            <a href="#" class="read-more-btn">
+              Read More
+              <span class="arrow">→</span>
+            </a>
+          </div>
+          <div class="col-md-4 text-center card-product-req">
+            <img
+              src="./image/mobile-app-contact-img 1.svg"
+              alt="Contact us screen"
+              class="contact-phone"
+            />
+          </div>
+        </div>
+      </div>
+
+      <section class="services-section">
+        <div class="row g-4">
+          <!-- Heading Card -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card-services heading-card">
+              <h1 class="section-title">
+                Provide High Quality Data-Driven Service for IT Industry
+              </h1>
+              <a href="#" class="case-study-btn">
+                Read the case study
+                <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Service Card 1 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card-services service-card pink">
+              <div class="service-icon pink">
+                <img src="./image/icon-services-1.svg" alt="Service 01" />
+              </div>
+              <h3 class="service-title">Service 01</h3>
+              <p class="service-text">
+                Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
+                Eripiut Est An. An Quo
+              </p>
+              <a href="#" class="read-more">
+                READ MORE
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card-services service-card blue">
+              <div class="service-icon blue">
+                <img src="./image/icon-services-2.svg" alt="Service 01" />
+              </div>
+              <h3 class="service-title">Service 01</h3>
+              <p class="service-text">
+                Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
+                Eripiut Est An. An Quo
+              </p>
+              <a href="#" class="read-more">
+                READ MORE
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card-services service-card green">
+              <div class="service-icon green">
+                <img src="./image/icon-services-3.svg" alt="Service 01" />
+              </div>
+              <h3 class="service-title">Service 01</h3>
+              <p class="service-text">
+                Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
+                Eripiut Est An. An Quo
+              </p>
+              <a href="#" class="read-more">
+                READ MORE
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card-services service-card blue">
+              <div class="service-icon blue">
+                <img src="./image/icon-services-4.svg" alt="Service 01" />
+              </div>
+              <h3 class="service-title">Service 01</h3>
+              <p class="service-text">
+                Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
+                Eripiut Est An. An Quo
+              </p>
+              <a href="#" class="read-more">
+                READ MORE
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card-services service-card pink">
+              <div class="service-icon pink">
+                <img src="./image/icon-services-5.svg" alt="Service 01" />
+              </div>
+              <h3 class="service-title">Service 01</h3>
+              <p class="service-text">
+                Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
+                Eripiut Est An. An Quo
+              </p>
+              <a href="#" class="read-more">
+                READ MORE
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="testimonial-section">
+        <h2 class="section-title">What They Say About Our Service</h2>
+
+        <!-- Swiper Slider -->
+        <div class="swiper testimonialSwiper">
+          <div class="swiper-wrapper">
+            <!-- Testimonial 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="rating">
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                </div>
+                <div class="quote-icon">"</div>
+                <div class="card-divider"></div>
+                <p class="testimonial-text">
+                  Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
+                  Since The 1500s, When An Unknown Printer&orem Ipsum Has Been
+                  The Industry's
+                </p>
+                <div class="testimonial-author">
+                  <img
+                  src="./image/avatar.svg"
+                    alt="Bodrum Salvador"
+                    class="author-avatar"
+                  />
+                  <div class="author-info">
+                    <span class="author-name">Bodrum Salvador</span>
+                    <span class="author-title">Product Designer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="rating">
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                </div>
+                <div class="quote-icon">"</div>
+                <div class="card-divider"></div>
+                <p class="testimonial-text">
+                  Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
+                  Since The 1500s, When An Unknown Printer&orem Ipsum Has Been
+                  The Industry's
+                </p>
+                <div class="testimonial-author">
+                  <img
+                  src="./image/avatar.svg"
+                    alt="Bodrum Salvador"
+                    class="author-avatar"
+                  />
+                  <div class="author-info">
+                    <span class="author-name">Bodrum Salvador</span>
+                    <span class="author-title">Product Designer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="rating">
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                </div>
+                <div class="quote-icon">"</div>
+                <div class="card-divider"></div>
+                <p class="testimonial-text">
+                  Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
+                  Since The 1500s, When An Unknown Printer&orem Ipsum Has Been
+                  The Industry's
+                </p>
+                <div class="testimonial-author">
+                  <img
+                  src="./image/avatar.svg"
+                    alt="Bodrum Salvador"
+                    class="author-avatar"
+                  />
+                  <div class="author-info">
+                    <span class="author-name">Bodrum Salvador</span>
+                    <span class="author-title">Product Designer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="rating">
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                  <span>★</span>
+                </div>
+                <div class="quote-icon">"</div>
+                <div class="card-divider"></div>
+                <p class="testimonial-text">
+                  Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
+                  Since The 1500s, When An Unknown Printer&orem Ipsum Has Been
+                  The Industry's
+                </p>
+                <div class="testimonial-author">
+                  <img
+                    src="./image/avatar.svg"
+                    alt="Bodrum Salvador"
+                    class="author-avatar"
+                  />
+                  <div class="author-info">
+                    <span class="author-name">Bodrum Salvador</span>
+                    <span class="author-title">Product Designer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination dots -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+     <div class="banner-driving">
+ <div class="row align-items-center">
+            <div class="col-md-6 banner-text">
+                <h2>Driving Future-Ready Success</h2>
+                <button class="btn btn-custom mt-3">Read More →</button>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="image.png" alt="Phone UI" class="phone-image">
+            </div>
+        </div>
+
+     </div>
+       
+  
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".testimonialSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1400: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
