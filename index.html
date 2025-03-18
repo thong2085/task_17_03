@@ -12,10 +12,7 @@
   <!-- Custom CSS -->
   <style>
     .gradient-bg {
-      background: linear-gradient(90deg,
-          #ff3366 0%,
-          #ff5e62 50%,
-          #ff8c66 100%);
+      background: linear-gradient(283deg, #F05528 -2.53%, #F0285F 98.17%);
       color: white;
       padding: 3rem 0;
       border-radius: 15px;
@@ -63,19 +60,27 @@
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 10px;
       padding: 2rem;
-      text-align: center;
+      width: 100%;
+      text-align: left;
       height: 100%;
     }
 
     .stats-number {
-      font-size: 2.5rem;
+      color: #000;
+      font-family: Jost;
+      font-size: 50px;
+      font-style: normal;
       font-weight: 700;
-      margin-bottom: 0.5rem;
+      line-height: normal;
     }
 
     .stats-text {
-      font-size: 1rem;
-      color: #333;
+      color: #000;
+      font-family: Jost;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
     }
 
     .partners-container {
@@ -94,12 +99,14 @@
       object-fit: contain;
     }
 
-    .section-title {
+    .section-title-section-2 {
+      color: #F05528;
       text-align: center;
-      color: #ff5e62;
-      font-size: 2.5rem;
+      font-family: "Be Vietnam Pro";
+      font-size: 40px;
+      font-style: normal;
       font-weight: 700;
-      margin: 3rem 0;
+      line-height: normal;
     }
 
     .stats-row {
@@ -108,14 +115,18 @@
 
     .stats-card.blue {
       background-color: #e6efff;
+    
+
     }
 
     .stats-card.pink {
       background-color: #ffe6e6;
+
     }
 
     .stats-card.green {
       background-color: #e6ffef;
+  
     }
 
     .stats-card.yellow {
@@ -326,14 +337,17 @@
 
     .service-card.pink {
       background-color: #fff0ee;
+      border: 1px solid rgba(248, 193, 177, 0.58);
     }
 
     .service-card.blue {
       background-color: #eef5ff;
+      border: 1px solid rgba(182, 254, 243, 0.58);
     }
 
     .service-card.green {
       background-color: #eefff5;
+      border: 1px solid rgba(182, 254, 243, 0.58);
     }
 
     .service-icon {
@@ -402,7 +416,14 @@
       color: #ff6633;
       margin-bottom: 3rem;
     }
-
+    .section-title-provider {
+      color: #000;
+      font-family: "Be Vietnam Pro";
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
     .testimonial-card {
       background-color: white;
       padding: 1.5rem 1rem;
@@ -521,10 +542,11 @@
     }
 
     .hero-section {
-      background: linear-gradient(90deg, #ffaf2e 0%, #ff7300 100%);
+      background: linear-gradient(285deg, #F05528 -2.36%, #F0B928 94.65%);
       position: relative;
-      border-radius: 20px;
-      position: relative;
+      display: flex;
+     
+      justify-content: space-between;
     }
 
     .hero-content {
@@ -584,8 +606,8 @@
       border-radius: 30px;
       position: absolute;
       top: 50%;
-      right: 0%;
-      transform: translate(20%, -50%);
+      right: -8%;
+      transform: translate(-50%, -50%);
     }
 
     .blog-section {
@@ -714,8 +736,8 @@
     }
 
     .read-more-btn {
-      border: 1px solid #fff;
-      color: #fff;
+      border: 1px solid #000000;
+      color: #000000;
       padding: 10px 30px;
       border-radius: 50px;
       text-decoration: none;
@@ -827,7 +849,11 @@
       font-size: 14px;
       text-align: center;
     }
-
+@media (max-width: 1440px) {
+  .mockup-container {
+      right: -10%;
+    }
+}
     @media (max-width: 991px) {
       .hero-content {
         text-align: center;
@@ -837,6 +863,9 @@
       .mockup-container {
         margin-top: 30px;
         margin-bottom: 40px;
+      }
+      .mockup-container {
+        display: none;
       }
     }
 
@@ -861,9 +890,7 @@
         font-size: 2rem;
       }
 
-      .mockup-container {
-        display: none;
-      }
+ 
 
       .testimonial-card {
         padding: 1.5rem 1rem;
@@ -948,7 +975,7 @@
   <div class="container my-5">
     <!-- Hero Section -->
     <div class="gradient-bg mb-5" data-aos="fade-up">
-      <div class="container py-4">
+      <div class="container py-4 px-5">
         <div class="row align-items-center">
           <div class="col-lg-6">
             <h1 class="hero-title mb-4">
@@ -987,7 +1014,7 @@
     </div>
 
     <!-- Stats Section -->
-    <h2 class="section-title" data-aos="fade-up">Learn How to Quickly Generate</h2>
+    <h2 class="section-title-section-2" data-aos="fade-up">Learn How to Quickly Generate</h2>
 
     <div class="row stats-row g-4" data-aos="fade-up">
       <div class="col-md-3">
@@ -1017,7 +1044,7 @@
     </div>
 
     <div class="case-study-section" data-aos="fade-up">
-      <h2 class="case-study-title">Made by TheApp4U</h2>
+      <h2 class="section-title-section-2">Made by TheApp4U</h2>
 
       <div class="case-study-card">
         <div class="row align-items-center">
@@ -1136,7 +1163,7 @@
         <!-- Heading Card -->
         <div class="col-md-4 col-sm-6">
           <div class="card-services heading-card">
-            <h1 class="section-title">
+            <h1 class="section-title-provider">
               Provide High Quality Data-Driven Service for IT Industry
             </h1>
             <a href="#" class="case-study-btn">
@@ -1166,8 +1193,8 @@
 
         <!-- Service Card 2 -->
         <div class="col-md-4 col-sm-6">
-          <div class="card-services service-card blue">
-            <div class="service-icon blue">
+          <div class="card-services service-card green">
+            <div class="service-icon green">
               <img src="./image/icon-services-2.svg" alt="Service 01" />
             </div>
             <h3 class="service-title">Service 01</h3>
@@ -1237,240 +1264,233 @@
         </div>
       </div>
     </section>
-    <section class="testimonial-section" data-aos="fade-up">
-      <h2 class="section-title">What They Say About Our Service</h2>
+    
 
-      <!-- Swiper Slider -->
-      <div class="swiper testimonialSwiper">
-        <div class="swiper-wrapper">
-          <!-- Testimonial 1 -->
-          <div class="swiper-slide">
-            <div class="testimonial-card">
-              <div class="rating">
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-              </div>
-              <div class="quote-icon">"</div>
-              <div class="card-divider"></div>
-              <p class="testimonial-text">
-                Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
-                Since The 1500s, When An Unknown Printer&orem Ipsum Has Been
-                The Industry's
-              </p>
-              <div class="testimonial-author">
-                <img src="./image/avatar.svg" alt="Bodrum Salvador" class="author-avatar" />
-                <div class="author-info">
-                  <span class="author-name">Bodrum Salvador</span>
-                  <span class="author-title">Product Designer</span>
-                </div>
-              </div>
+  </div>
+  <section class="testimonial-section" data-aos="fade-up">
+    <h2 class="section-title-section-2">What They Say About Our Service</h2>
+
+    <!-- Swiper Slider -->
+    <div class="swiper testimonialSwiper">
+      <div class="swiper-wrapper">
+        <!-- Testimonial 1 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="rating">
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
             </div>
-          </div>
-
-          <!-- Testimonial 2 -->
-          <div class="swiper-slide">
-            <div class="testimonial-card">
-              <div class="rating">
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-              </div>
-              <div class="quote-icon">"</div>
-              <div class="card-divider"></div>
-              <p class="testimonial-text">
-                Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
-                Since The 1500s, When An Unknown Printer&orem Ipsum Has Been
-                The Industry's
-              </p>
-              <div class="testimonial-author">
-                <img src="./image/avatar.svg" alt="Bodrum Salvador" class="author-avatar" />
-                <div class="author-info">
-                  <span class="author-name">Bodrum Salvador</span>
-                  <span class="author-title">Product Designer</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonial 3 -->
-          <div class="swiper-slide">
-            <div class="testimonial-card">
-              <div class="rating">
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-              </div>
-              <div class="quote-icon">"</div>
-              <div class="card-divider"></div>
-              <p class="testimonial-text">
-                Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
-                Since The 1500s, When An Unknown Printer&orem Ipsum Has Been
-                The Industry's
-              </p>
-              <div class="testimonial-author">
-                <img src="./image/avatar.svg" alt="Bodrum Salvador" class="author-avatar" />
-                <div class="author-info">
-                  <span class="author-name">Bodrum Salvador</span>
-                  <span class="author-title">Product Designer</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonial 4 -->
-          <div class="swiper-slide">
-            <div class="testimonial-card">
-              <div class="rating">
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-                <span>★</span>
-              </div>
-              <div class="quote-icon">"</div>
-              <div class="card-divider"></div>
-              <p class="testimonial-text">
-                Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
-                Since The 1500s, When An Unknown Printer&orem Ipsum Has Been
-                The Industry's
-              </p>
-              <div class="testimonial-author">
-                <img src="./image/avatar.svg" alt="Bodrum Salvador" class="author-avatar" />
-                <div class="author-info">
-                  <span class="author-name">Bodrum Salvador</span>
-                  <span class="author-title">Product Designer</span>
-                </div>
+            <div class="quote-icon">"</div>
+            <div class="card-divider"></div>
+            <p class="testimonial-text">
+              Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
+              Since The 1500s, When An Unknown Printer&orem Ipsum Has Been
+              The Industry's
+            </p>
+            <div class="testimonial-author">
+              <img src="./image/avatar.svg" alt="Bodrum Salvador" class="author-avatar" />
+              <div class="author-info">
+                <span class="author-name">Bodrum Salvador</span>
+                <span class="author-title">Product Designer</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Pagination dots -->
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
+        <!-- Testimonial 2 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="rating">
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>
+            <div class="quote-icon">"</div>
+            <div class="card-divider"></div>
+            <p class="testimonial-text">
+              Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
+              Since The 1500s, When An Unknown Printer&orem Ipsum Has Been
+              The Industry's
+            </p>
+            <div class="testimonial-author">
+              <img src="./image/avatar.svg" alt="Bodrum Salvador" class="author-avatar" />
+              <div class="author-info">
+                <span class="author-name">Bodrum Salvador</span>
+                <span class="author-title">Product Designer</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <section class="hero-section" data-aos="fade-up">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="hero-content">
-              <h1 class="hero-title">Driving Future-Ready Success</h1>
-              <a href="#" class="btn read-more-btn">
-                Read More
-                <span class="arrow-icon">→</span>
+        <!-- Testimonial 3 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="rating">
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>
+            <div class="quote-icon">"</div>
+            <div class="card-divider"></div>
+            <p class="testimonial-text">
+              Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
+              Since The 1500s, When An Unknown Printer&orem Ipsum Has Been
+              The Industry's
+            </p>
+            <div class="testimonial-author">
+              <img src="./image/avatar.svg" alt="Bodrum Salvador" class="author-avatar" />
+              <div class="author-info">
+                <span class="author-name">Bodrum Salvador</span>
+                <span class="author-title">Product Designer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="rating">
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>
+            <div class="quote-icon">"</div>
+            <div class="card-divider"></div>
+            <p class="testimonial-text">
+              Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
+              Since The 1500s, When An Unknown Printer&orem Ipsum Has Been
+              The Industry's
+            </p>
+            <div class="testimonial-author">
+              <img src="./image/avatar.svg" alt="Bodrum Salvador" class="author-avatar" />
+              <div class="author-info">
+                <span class="author-name">Bodrum Salvador</span>
+                <span class="author-title">Product Designer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination dots -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <section class="hero-section" data-aos="fade-up">
+          <div class="hero-content">
+            <h1 class="hero-title">Driving Future-Ready Success</h1>
+            <a href="#" class="btn read-more-btn">
+              Read More
+              <span class="arrow-icon">→</span>
+            </a>
+    </div>
+    <div class="mockup-container">
+      <div class="phone-mockup">
+        <img src="./image/Img-2 1.svg" alt="App Interface Mockup" />
+      </div>
+    </div>
+  </section>
+  <section class="blog-section container" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">
+        Learn from our Digital<br />Product Agency
+      </h2>
+
+      <div class="row">
+        <!-- Article 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card-blog h-100">
+            <div class="card-img-container">
+              <img src="./image/blog-2.svg" class="card-img-top" alt="Team collaboration" />
+              <div class="date-badge">
+                <div class="day">22</div>
+                <div class="month">May</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="category">KNOWLEDGE</div>
+              <h5 class="card-title">
+                An Quodo Lorem Labortis Ull Corper.
+              </h5>
+              <p class="card-text">
+                Enim Animal Cons Incorrupte, De Serum Et Princip Deos, Virut
+                De Eripuit Est An. An Quodo Lorem Labortis Ull Corper.
+              </p>
+              <a href="#" class="read-more">
+                READ MORE
+                <span class="arrow">→</span>
               </a>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="mockup-container">
-              <div class="phone-mockup">
-                <img src="./image/Img-2 1.svg" alt="App Interface Mockup" />
+        </div>
+
+        <!-- Article 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card-blog h-100">
+            <div class="card-img-container">
+              <img src="./image/blog-1.svg" class="card-img-top" alt="Laptop with website design" />
+              <div class="date-badge">
+                <div class="day">22</div>
+                <div class="month">May</div>
               </div>
+            </div>
+            <div class="card-body">
+              <div class="category">KNOWLEDGE</div>
+              <h5 class="card-title">
+                An Quodo Lorem Labortis Ull Corper.
+              </h5>
+              <p class="card-text">
+                Enim Animal Cons Incorrupte, De Serum Et Princip Deos, Virut
+                De Eripuit Est An. An Quodo Lorem Labortis Ull Corper.
+              </p>
+              <a href="#" class="read-more">
+                READ MORE
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card-blog h-100">
+            <div class="card-img-container">
+              <img src="./image/blog-3.svg" class="card-img-top" alt="Business woman smiling" />
+              <div class="date-badge">
+                <div class="day">22</div>
+                <div class="month">May</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="category">KNOWLEDGE</div>
+              <h5 class="card-title">
+                An Quodo Lorem Labortis Ull Corper.
+              </h5>
+              <p class="card-text">
+                Enim Animal Cons Incorrupte, De Serum Et Princip Deos, Virut
+                De Eripuit Est An. An Quodo Lorem Labortis Ull Corper.
+              </p>
+              <a href="#" class="read-more">
+                READ MORE
+                <span class="arrow">→</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <section class="blog-section" data-aos="fade-up">
-      <div class="container">
-        <h2 class="section-title">
-          Learn from our Digital<br />Product Agency
-        </h2>
-
-        <div class="row">
-          <!-- Article 1 -->
-          <div class="col-md-4 mb-4">
-            <div class="card-blog h-100">
-              <div class="card-img-container">
-                <img src="./image/blog-2.svg" class="card-img-top" alt="Team collaboration" />
-                <div class="date-badge">
-                  <div class="day">22</div>
-                  <div class="month">May</div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="category">KNOWLEDGE</div>
-                <h5 class="card-title">
-                  An Quodo Lorem Labortis Ull Corper.
-                </h5>
-                <p class="card-text">
-                  Enim Animal Cons Incorrupte, De Serum Et Princip Deos, Virut
-                  De Eripuit Est An. An Quodo Lorem Labortis Ull Corper.
-                </p>
-                <a href="#" class="read-more">
-                  READ MORE
-                  <span class="arrow">→</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Article 2 -->
-          <div class="col-md-4 mb-4">
-            <div class="card-blog h-100">
-              <div class="card-img-container">
-                <img src="./image/blog-1.svg" class="card-img-top" alt="Laptop with website design" />
-                <div class="date-badge">
-                  <div class="day">22</div>
-                  <div class="month">May</div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="category">KNOWLEDGE</div>
-                <h5 class="card-title">
-                  An Quodo Lorem Labortis Ull Corper.
-                </h5>
-                <p class="card-text">
-                  Enim Animal Cons Incorrupte, De Serum Et Princip Deos, Virut
-                  De Eripuit Est An. An Quodo Lorem Labortis Ull Corper.
-                </p>
-                <a href="#" class="read-more">
-                  READ MORE
-                  <span class="arrow">→</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Article 3 -->
-          <div class="col-md-4 mb-4">
-            <div class="card-blog h-100">
-              <div class="card-img-container">
-                <img src="./image/blog-3.svg" class="card-img-top" alt="Business woman smiling" />
-                <div class="date-badge">
-                  <div class="day">22</div>
-                  <div class="month">May</div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="category">KNOWLEDGE</div>
-                <h5 class="card-title">
-                  An Quodo Lorem Labortis Ull Corper.
-                </h5>
-                <p class="card-text">
-                  Enim Animal Cons Incorrupte, De Serum Et Princip Deos, Virut
-                  De Eripuit Est An. An Quodo Lorem Labortis Ull Corper.
-                </p>
-                <a href="#" class="read-more">
-                  READ MORE
-                  <span class="arrow">→</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </div>
+    </div>
+  </section>
   <footer class="footer-section" data-aos="fade-up">
     <div class="container">
       <!-- Main Content -->
