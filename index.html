@@ -1,1643 +1,1977 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lorem Ipsum Generator</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <!-- Custom CSS -->
-  <style>
-    .gradient-bg {
-      background: linear-gradient(283deg, #F05528 -2.53%, #F0285F 98.17%);
-      color: white;
-      padding: 3rem 0;
-      border-radius: 15px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .hero-title {
-      font-weight: 700;
-      font-size: 2.5rem;
-      line-height: 1.2;
-    }
-
-    .hero-text {
-      font-size: 1rem;
-      max-width: 450px;
-    }
-
-    .robot-container {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .circle-bg {
-      position: absolute;
-      width: 350px;
-      height: 350px;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 50%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .img-fluid {
-      max-height: 400px;
-      object-fit: contain;
-      position: relative;
-      z-index: 2;
-    }
-
-    .stats-card {
-      background-color: rgba(255, 255, 255, 0.9);
-      border-radius: 10px;
-      padding: 2rem;
-      width: 100%;
-      text-align: left;
-      height: 100%;
-    }
-
-    .stats-number {
-      color: #000;
-      font-family: Jost;
-      font-size: 50px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-    }
-
-    .stats-text {
-      color: #000;
-      font-family: Jost;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
-
-    .partners-container {
-      background-color: white;
-      border-radius: 10px;
-      padding: 1rem;
-      margin-top: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-    }
-
-    .partner-logo {
-      height: 40px;
-      object-fit: contain;
-    }
-
-    .section-title-section-2 {
-      color: #F05528;
-      text-align: center;
-      font-family: "Be Vietnam Pro";
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-    }
-
-    .stats-row {
-      margin-top: 2rem;
-    }
-
-    .stats-card.blue {
-      background-color: #e6efff;
-    
-
-    }
-
-    .stats-card.pink {
-      background-color: #ffe6e6;
-
-    }
-
-    .stats-card.green {
-      background-color: #e6ffef;
-  
-    }
-
-    .stats-card.yellow {
-      background-color: #fffde6;
-    }
-
-    .case-study-section {
-      margin: 4rem 0;
-    }
-
-    .case-study-title {
-      color: #ff6633;
-      font-size: 1.8rem;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .case-study-card {
-      border: 1px solid #e0e0e0;
-      border-radius: 10px;
-      padding: 2rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    }
-
-    .case-study-logo {
-      height: 50px;
-      margin-bottom: 1rem;
-    }
-
-    .case-study-heading {
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-
-    .case-study-text {
-      color: #555;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-
-    .case-study-btn {
-      display: inline-flex;
-      align-items: center;
-      background-color: white;
-      color: #333;
-      border: 1px solid #f05528;
-      border-radius: 30px;
-      padding: 0.5rem 1.5rem;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-    }
-
-    .case-study-btn:hover {
-      background-color: #f8f8f8;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .case-study-btn .arrow {
-      margin-left: 0.5rem;
-      color: #ff6633;
-    }
-
-    .app-screenshot {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .phones-container {
-      position: relative;
-      height: 400px;
-      margin-top: 20px;
-    }
-
-    .phone-small {
-      position: absolute;
-      width: 170px;
-      border-radius: 20px;
-      z-index: 1;
-      left: 20%;
-      top: 50px;
-    }
-
-    .phone-large {
-      position: absolute;
-      width: 200px;
-      border-radius: 20px;
-      z-index: 2;
-      left: 40%;
-      top: 20px;
-    }
-
-    .product-req-section {
-      margin: 5rem 0;
-      background-image: url("./image/background-product.svg");
-      background-size: cover;
-      background-position: center;
-      border-radius: 20px;
-      padding: 4rem 3rem;
-      position: relative;
-
-      min-height: 350px;
-    }
-
-    .product-req-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 2rem;
-      color: #000;
-    }
-
-    .product-req-title span {
-      display: block;
-      line-height: 1.4;
-    }
-
-    .read-more-btn {
-      display: inline-flex;
-      align-items: center;
-      background-color: white;
-      color: #333;
-      border: 1px solid #ddd;
-      border-radius: 30px;
-      padding: 0.6rem 1.8rem;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
-
-    .read-more-btn:hover {
-      background-color: #f8f8f8;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .read-more-btn .arrow {
-      margin-left: 0.5rem;
-    }
-
-    .card-product-req {
-      position: relative;
-    }
-
-    .contact-phone {
-      max-width: 400px;
-      border-radius: 30px;
-      position: absolute;
-      top: 50%;
-      left: 0%;
-      transform: translate(-50%, -50%);
-    }
-
-    .services-section {
-      padding: 4rem 0;
-    }
-
-    .card-services {
-      border-radius: 10px;
-      padding: 2rem;
-      height: 100%;
-      transition: all 0.3s ease;
-      border: none;
-    }
-
-    .card-services:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    }
-
-    .heading-card {
-      background-color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .section-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 1.5rem;
-    }
-
-    .case-study-btn {
-      display: inline-flex;
-      align-items: center;
-      background-color: white;
-      color: #000;
-
-      border-radius: 30px;
-      padding: 0.6rem 1.8rem;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      width: fit-content;
-    }
-
-    .case-study-btn:hover {
-      background-color: #f8f8f8;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .case-study-btn .arrow {
-      margin-left: 0.5rem;
-      color: #ff6633;
-    }
-
-    .service-card.pink {
-      background-color: #fff0ee;
-      border: 1px solid rgba(248, 193, 177, 0.58);
-    }
-
-    .service-card.blue {
-      background-color: #eef5ff;
-      border: 1px solid rgba(182, 254, 243, 0.58);
-    }
-
-    .service-card.green {
-      background-color: #eefff5;
-      border: 1px solid rgba(182, 254, 243, 0.58);
-    }
-
-    .service-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .service-icon.pink {
-      color: #ff6633;
-    }
-
-    .service-icon.blue {
-      color: #3366ff;
-    }
-
-    .service-icon.green {
-      color: #33cc99;
-    }
-
-    .service-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-
-    .service-text {
-      color: #666;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-
-    .read-more {
-      display: inline-flex;
-      align-items: center;
-      color: #333;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .read-more .arrow {
-      margin-left: 0.5rem;
-      transition: transform 0.3s ease;
-    }
-
-    .read-more:hover .arrow {
-      transform: translateX(3px);
-    }
-
-    .testimonial-section {
-      padding: 4rem 0;
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 600;
-      text-align: center;
-      color: #ff6633;
-      margin-bottom: 3rem;
-    }
-    .section-title-provider {
-      color: #000;
-      font-family: "Be Vietnam Pro";
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-    }
-    .testimonial-card {
-      background-color: white;
-      padding: 1.5rem 1rem;
-      height: 100%;
-      position: relative;
-    }
-
-    .card-divider {
-      height: 3px;
-      background-color: #ffd700;
-      width: 100%;
-      margin-bottom: 1.5rem;
-    }
-
-    .rating {
-      color: #ff6633;
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
-    }
-
-    .quote-icon {
-      position: absolute;
-      top: 1.5rem;
-      right: 1rem;
-      color: #ffd700;
-      opacity: 0.5;
-      font-size: 2rem;
-    }
-
-    .testimonial-text {
-      color: #555;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-      min-height: 100px;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-    }
-
-    .author-avatar {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      margin-right: 1rem;
-      object-fit: cover;
-    }
-
-    .author-info {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .author-name {
-      font-weight: 600;
-      font-size: 1rem;
-      margin-bottom: 0.2rem;
-    }
-
-    .author-title {
-      color: #777;
-      font-size: 0.8rem;
-    }
-
-    .swiper {
-      width: 100%;
-      padding-bottom: 3rem;
-    }
-
-    .swiper-pagination {
-      bottom: 0;
-    }
-
-    .swiper-pagination-bullet {
-      width: 10px;
-      height: 10px;
-    }
-
-    .swiper-pagination-bullet-active {
-      background-color: #ff6633;
-    }
-
-    .banner-driving {
-      background: linear-gradient(to right, #f58634, #ffcc33);
-      color: white;
-      padding: 50px 0;
-    }
-
-    .banner-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: left;
-      color: #fff;
-    }
-
-    .btn-custom {
-      background-color: white;
-      color: #f58634;
-      border-radius: 30px;
-      padding: 10px 20px;
-      border: none;
-    }
-
-    .btn-custom:hover {
-      background-color: #ffcc33;
-      color: white;
-    }
-
-    .phone-image {
-      max-width: 100%;
-      border-radius: 15px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .hero-section {
-      background: linear-gradient(285deg, #F05528 -2.36%, #F0B928 94.65%);
-      position: relative;
-      display: flex;
-     
-      justify-content: space-between;
-    }
-
-    .hero-content {
-      padding: 80px 20px;
-      color: white;
-    }
-
-    .hero-title {
-      font-size: 42px;
-      font-weight: 700;
-      margin-bottom: 40px;
-    }
-
-    .read-more-btn {
-      background-color: transparent;
-      color: white;
-      border: 2px solid white;
-      border-radius: 50px;
-      padding: 10px 25px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-
-    .read-more-btn:hover {
-      background-color: white;
-      color: #f9a826;
-    }
-
-    .arrow-icon {
-      margin-left: 8px;
-    }
-
-    .phone-mockup {
-      position: relative;
-      max-width: 100%;
-      height: auto;
-    }
-
-    .phone-mockup img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .blob-shape {
-      position: absolute;
-      right: -100px;
-      bottom: -100px;
-      width: 400px;
-      height: 400px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      z-index: 0;
-    }
-
-    .mockup-container {
-      max-width: 400px;
-      border-radius: 30px;
-      position: absolute;
-      top: 50%;
-      right: -8%;
-      transform: translate(-50%, -50%);
-    }
-
-    .blog-section {
-      padding: 80px 0;
-    }
-
-    .section-title {
-      color: #ff5722;
-      font-weight: 600;
-      text-align: center;
-      margin-bottom: 50px;
-      font-size: 32px;
-    }
-
-    .card-blog {
-      border: none;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card-blog:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .card-img-container {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card-img-top {
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .date-badge {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background-color: white;
-      color: #333;
-      font-size: 12px;
-      font-weight: 600;
-      padding: 5px 10px;
-      border-radius: 5px;
-      text-align: center;
-      line-height: 1.2;
-    }
-
-    .day {
-      font-size: 16px;
-      font-weight: 700;
-    }
-
-    .month {
-      text-transform: uppercase;
-    }
-
-    .card-body {
-      padding: 20px;
-    }
-
-    .category {
-      color: #999;
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .card-title {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .card-text {
-      color: #666;
-      font-size: 14px;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    .read-more {
-      color: #ff5722;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-    }
-
-    .read-more:hover {
-      color: #e64a19;
-    }
-
-    .read-more .arrow {
-      margin-left: 8px;
-      transition: transform 0.3s ease;
-    }
-
-    .read-more:hover .arrow {
-      transform: translateX(5px);
-    }
-
-    .footer-section {
-      background-color: #0b1726;
-      color: #fff;
-      padding: 70px 0 30px;
-    }
-
-    .main-heading {
-      font-size: 36px;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .description {
-      color: #b0b7c3;
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 30px;
-      max-width: 650px;
-    }
-
-    .read-more-btn {
-      border: 1px solid #000000;
-      color: #000000;
-      padding: 10px 30px;
-      border-radius: 50px;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      transition: all 0.3s ease;
-      margin-bottom: 40px;
-    }
-
-    .read-more-btn:hover {
-      background-color: #fff;
-      color: #0b1726;
-    }
-
-    .read-more-btn .arrow {
-      margin-left: 10px;
-    }
-
-    .footer-title {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 25px;
-    }
-
-    .contact-info,
-    .quick-links {
-      color: #b0b7c3;
-      font-size: 14px;
-      line-height: 1.6;
-      margin-bottom: 30px;
-    }
-
-    .quick-links-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .quick-links-list li {
-      margin-bottom: 15px;
-    }
-
-    .quick-links-list a {
-      color: #b0b7c3;
-      text-decoration: none;
-      transition: color 0.3s ease;
-      display: flex;
-      align-items: center;
-    }
-
-    .quick-links-list a:hover {
-      color: #fff;
-    }
-
-    .quick-links-list .arrow {
-      color: #b0b7c3;
-      margin-right: 10px;
-      font-size: 12px;
-    }
-
-    .social-icons {
-      margin-top: 25px;
-    }
-
-    .social-icons a {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 36px;
-      height: 36px;
-      background-color: #fff;
-      color: #0b1726;
-      border-radius: 50%;
-      margin-right: 10px;
-      transition: all 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      background-color: #f0f0f0;
-      transform: translateY(-3px);
-    }
-
-    .newsletter-form {
-      margin-top: 20px;
-    }
-
-    .newsletter-form .form-control {
-      background-color: transparent;
-      border: 1px solid #314259;
-      border-radius: 5px;
-      color: #fff;
-      padding: 12px 15px;
-    }
-
-    .newsletter-form .form-control::placeholder {
-      color: #5d7290;
-    }
-
-    .newsletter-form .form-control:focus {
-      box-shadow: none;
-      border-color: #fff;
-    }
-
-    .copyright {
-      border-top: 1px solid #314259;
-      padding-top: 20px;
-      margin-top: 50px;
-      color: #b0b7c3;
-      font-size: 14px;
-      text-align: center;
-    }
-@media (max-width: 1440px) {
-  .mockup-container {
-      right: -10%;
-    }
-}
-    @media (max-width: 991px) {
-      .hero-content {
-        text-align: center;
-        padding: 60px 20px;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lorem Ipsum Generator</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- Custom CSS -->
+    <style>
+      .gradient-bg {
+        background: linear-gradient(283deg, #f05528 -2.53%, #f0285f 98.17%);
+        color: white;
+        padding: 3rem 0;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
       }
 
-      .mockup-container {
-        margin-top: 30px;
-        margin-bottom: 40px;
-      }
-      .mockup-container {
-        display: none;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .footer-section {
-        padding: 50px 0 20px;
+      .hero-title {
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 1.2;
       }
 
-      .main-heading {
-        font-size: 28px;
+      .hero-text {
+        font-size: 1rem;
+        max-width: 450px;
       }
 
-      .footer-title {
-        margin-top: 30px;
+      .robot-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
-      .card-blog {
-        margin-bottom: 30px;
+      .circle-bg {
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
 
-      .section-title {
-        font-size: 2rem;
+      .img-fluid {
+        max-height: 400px;
+        object-fit: contain;
+        position: relative;
+        z-index: 2;
       }
 
- 
+      .stats-card {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        padding: 2rem;
+        width: 100%;
+        text-align: left;
+        height: 100%;
+      }
 
-      .testimonial-card {
-        padding: 1.5rem 1rem;
+      .stats-number {
+        color: #000;
+        font-family: Jost;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      .stats-text {
+        color: #000;
+        font-family: Jost;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
       }
 
       .partners-container {
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        /* Firefox */
-        -ms-overflow-style: none;
-        /* IE and Edge */
+        background-color: white;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
       }
 
-      .contact-phone {
-        display: none;
+      .partner-logo {
+        height: 40px;
+        object-fit: contain;
       }
 
-      .partners-container::-webkit-scrollbar {
-        display: none;
-        /* Chrome, Safari and Opera */
+      .section-title-section-2 {
+        color: #f05528;
+        text-align: center;
+        font-family: "Be Vietnam Pro";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 20px;
       }
 
-      .hero-title {
+      .stats-row {
+        margin-top: 2rem;
+      }
+
+      .stats-card.blue {
+        border: 1px solid rgba(215, 215, 215, 0.58);
+
+        background: #e4edff;
+      }
+
+      .stats-card.pink {
+        border: 1px solid rgba(215, 215, 215, 0.58);
+
+        background: #ffe5e5;
+      }
+
+      .stats-card.green {
+        border: 1px solid rgba(215, 215, 215, 0.58);
+
+        background: #d5f2ff;
+      }
+
+      .stats-card.yellow {
+        border: 1px solid rgba(215, 215, 215, 0.58);
+
+        background: #dfffe2;
+      }
+
+      .case-study-section {
+        margin: 4rem 0;
+      }
+
+      .case-study-title {
+        color: #ff6633;
         font-size: 1.8rem;
-        line-height: 1.3;
+        text-align: center;
+        margin-bottom: 2rem;
       }
 
+      .case-study-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .case-study-logo {
+        height: 50px;
+        margin-bottom: 1rem;
+      }
+
+      .case-study-heading {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .case-study-text {
+        color: #555;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+
+      .case-study-btn {
+        display: inline-flex;
+        align-items: center;
+        background-color: white;
+        color: #333;
+        border: 1px solid #f05528;
+        border-radius: 30px;
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+      }
+
+      .case-study-btn:hover {
+        background-color: #f8f8f8;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .case-study-btn .arrow {
+        margin-left: 0.5rem;
+        color: #ff6633;
+      }
+      .case-study-btn-provider {
+        display: inline-flex;
+        align-items: center;
+        background-color: white;
+        color: #333;
+        width: 70%;
+        text-decoration: none;
+        border: 1px solid #f05528;
+        border-radius: 30px;
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+        justify-content: space-between;
+        padding: 16px;
+        transition: all 0.3s ease;
+      }
+
+      .case-study-btn-provider:hover {
+        background-color: #f8f8f8;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .case-study-btn-provider .arrow {
+        margin-left: 0.5rem;
+        color: #ff6633;
+      }
       .app-screenshot {
-        max-width: 50%;
+        max-width: 100%;
         height: auto;
       }
 
+      .phones-container {
+        position: relative;
+        height: 400px;
+        margin-top: 20px;
+      }
+
       .phone-small {
-        width: 150px;
-        left: 10%;
+        position: absolute;
+        width: 170px;
+        border-radius: 20px;
+        z-index: 1;
+        left: 20%;
+        top: 50px;
       }
 
       .phone-large {
-        width: 180px;
-        left: 30%;
+        position: absolute;
+        width: 200px;
+        border-radius: 20px;
+        z-index: 2;
+        left: 40%;
+        top: 20px;
       }
 
-      .phones-container {
-        height: 330px;
+      .product-req-section {
+        margin: 5rem 0;
+        background-image: url("./image/background-product.svg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px;
+        padding: 4rem 3rem;
+        position: relative;
+        min-height: 550px;
       }
 
+      .product-req-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+        color: #000;
+      }
+
+      .product-req-title span {
+        display: block;
+        line-height: 1.4;
+      }
+
+      .read-more-btn {
+        display: inline-flex;
+        align-items: center;
+        background-color: white;
+        color: #333;
+        border: 1px solid #ddd;
+        border-radius: 30px;
+        padding: 0.6rem 1.8rem;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .read-more-btn:hover {
+        background-color: #f8f8f8;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .read-more-btn .arrow {
+        margin-left: 0.5rem;
+      }
+      .read-more-btn-f {
+        margin-bottom: 10px;
+      }
+
+      .read-more-btn-f:hover {
+        background-color: #f8f8f8;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .read-more-btn-f .arrow {
+        margin-left: 0.5rem;
+      }
+      .card-product-req {
+        position: relative;
+      }
+
+      .contact-phone {
+        max-width: 600px;
+        border-radius: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -36%);
+      }
+
+      .services-section {
+        padding: 4rem 0;
+      }
+
+      .card-services {
+        border-radius: 10px;
+        padding: 2rem;
+        height: 100%;
+        transition: all 0.3s ease;
+        border: none;
+      }
+
+      .card-services:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .heading-card {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .testimonial-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+      }
+      .testimonial-quote {
+        color: #ffd1cc;
+        font-size: 36px;
+        margin-right: 15px;
+      }
       .section-title {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
       }
 
-      .card {
-        padding: 1.5rem;
+      .case-study-btn {
+        display: inline-flex;
+        align-items: center;
+        background-color: white;
+        color: #000;
+
+        border-radius: 30px;
+        padding: 0.6rem 1.8rem;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        width: fit-content;
+      }
+
+      .case-study-btn:hover {
+        background-color: #f8f8f8;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .case-study-btn .arrow {
+        margin-left: 0.5rem;
+        color: #ff6633;
+      }
+
+      .service-card.pink {
+        background: linear-gradient(
+          359deg,
+          rgba(252, 244, 237, 0.44) 0.93%,
+          rgba(255, 207, 193, 0.44) 99.22%
+        );
+        border: 1px solid rgba(248, 193, 177, 0.58);
+      }
+
+      .service-card.blue {
+        background: linear-gradient(
+          0deg,
+          rgba(252, 244, 237, 0.44) 0.09%,
+          rgba(191, 223, 255, 0.44) 99.91%
+        );
+        border: 1px solid rgba(182, 254, 243, 0.58);
+      }
+
+      .service-card.green {
+        background: linear-gradient(
+          0deg,
+          rgba(252, 244, 237, 0.44) 0.09%,
+          rgba(182, 254, 243, 0.44) 99.91%
+        );
+        border: 1px solid rgba(182, 254, 243, 0.58);
+      }
+
+      .service-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .service-icon.pink {
+        color: #ff6633;
+      }
+
+      .service-icon.blue {
+        color: #3366ff;
+      }
+
+      .service-icon.green {
+        color: #33cc99;
       }
 
       .service-title {
-        font-size: 1rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
       }
 
       .service-text {
-        font-size: 0.8rem;
+        color: #666;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
       }
 
       .read-more {
-        font-size: 0.7rem;
+        display: inline-flex;
+        align-items: center;
+        color: #333;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
-    }
 
-    @media (max-width: 576px) {
+      .read-more .arrow {
+        margin-left: 0.5rem;
+        transition: transform 0.3s ease;
+      }
+
+      .read-more:hover .arrow {
+        transform: translateX(3px);
+      }
+
+      .testimonial-section {
+        padding: 4rem 0;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-align: center;
+        color: #ff6633;
+        margin-bottom: 3rem;
+      }
+      .section-title-provider {
+        color: #000;
+        font-family: "Be Vietnam Pro";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .testimonial-card {
+        background-color: white;
+        padding: 1.5rem 1rem;
+        height: 100%;
+        position: relative;
+        border-radius: 5px;
+        border-top: 5px solid #ffbc08;
+      }
+
+      .card-divider {
+        height: 3px;
+        background-color: #ffd700;
+        width: 100%;
+        margin-bottom: 1.5rem;
+      }
+
+      .rating {
+        color: #ff6633;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .quote-icon {
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+        color: #ffd700;
+        opacity: 0.5;
+        font-size: 2rem;
+      }
+
+      .testimonial-text {
+        color: #555;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        min-height: 100px;
+      }
+      .date-badge-text {
+        color: #58468c;
+        text-align: center;
+        font-family: "Be Vietnam Pro";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        text-transform: capitalize;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+      }
+
+      .author-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 1rem;
+        object-fit: cover;
+      }
+
+      .author-info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .author-name {
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .author-title {
+        color: #777;
+        font-size: 0.8rem;
+      }
+
+      .swiper {
+        width: 100%;
+        padding-bottom: 3rem;
+      }
+
+      .swiper-pagination {
+        bottom: 0;
+      }
+
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: #ff6633;
+      }
+
+      .banner-driving {
+        background: linear-gradient(to right, #f58634, #ffcc33);
+        color: white;
+        padding: 50px 0;
+      }
+
+      .banner-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        color: #fff;
+      }
+
+      .btn-custom {
+        background-color: white;
+        color: #f58634;
+        border-radius: 30px;
+        padding: 10px 20px;
+        border: none;
+      }
+
+      .btn-custom:hover {
+        background-color: #ffcc33;
+        color: white;
+      }
+
+      .phone-image {
+        max-width: 100%;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .hero-section {
+        background-image: url(./image/bg-visa.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 1000px;
+        width: 100%;
+        position: relative;
+      }
+
+      .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+
       .hero-title {
-        font-size: 1.5rem;
-        line-height: 1.4;
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 40px;
       }
-    }
-  </style>
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-</head>
 
-<body>
-  <div class="container my-5">
-    <!-- Hero Section -->
-    <div class="gradient-bg mb-5" data-aos="fade-up">
-      <div class="container py-4 px-5">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <h1 class="hero-title mb-4">
-              Learn How to Quickly Generate Placehder Text Using a Lorem Ipsum
-              Tool
-            </h1>
-            <p class="hero-text">
-              For over a decade, we've helped startups, nonprofits, and
-              corporations build, ship, and launch products that scale their
-              businesses
-            </p>
-          </div>
-          <div class="col-lg-6 robot-container">
-            <div class="circle-bg"></div>
-            <img src="./image/robo.gif" alt="Robot illustration" class="img-fluid" style="
+      .read-more-btn {
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        border-radius: 50px;
+        padding: 10px 25px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .read-more-btn:hover {
+        background-color: white;
+        color: #f9a826;
+      }
+
+      .arrow-icon {
+        margin-left: 8px;
+      }
+
+      .phone-mockup {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .phone-mockup img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .blob-shape {
+        position: absolute;
+        right: -100px;
+        bottom: -100px;
+        width: 400px;
+        height: 400px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        z-index: 0;
+      }
+
+      .mockup-container {
+        max-width: 400px;
+        border-radius: 30px;
+        position: absolute;
+        top: 50%;
+        right: -8%;
+        transform: translate(-50%, -50%);
+      }
+
+      .blog-section {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        color: #ff5722;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 32px;
+      }
+
+      .card-blog {
+        border: none;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card-blog:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-img-container {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card-img-top {
+        object-fit: cover;
+      }
+
+      .date-badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 13px;
+        border-radius: 5px;
+        opacity: 0.6;
+        background: #fff;
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+      }
+
+      .day {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .month {
+        text-transform: uppercase;
+      }
+
+      .card-body {
+        padding: 20px;
+      }
+
+      .category {
+        color: #716c80;
+
+        font-family: "Be Vietnam Pro";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 28px; /* 233.333% */
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+      }
+
+      .card-title {
+        color: var(--text, #000);
+        font-family: "Be Vietnam Pro";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+      }
+
+      .card-text {
+        color: #716c80;
+
+        font-family: "Be Vietnam Pro";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 28px; /* 186.667% */
+        text-transform: capitalize;
+      }
+      .read-more-card-s4 {
+        color: var(--text, #000);
+        font-family: "Be Vietnam Pro";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+      .read-more {
+        color: #ff5722;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .read-more:hover {
+        color: #e64a19;
+      }
+
+      .read-more .arrow {
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .read-more:hover .arrow {
+        transform: translateX(5px);
+      }
+
+      .footer-section {
+        background-image: url(./image/bg-footer.svg);
+        color: #fff;
+        padding: 70px 0 0;
+      }
+
+      .main-heading {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .description {
+        color: #b0b7c3;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        max-width: 650px;
+      }
+
+      .read-more-btn {
+        border: 1px solid #000000;
+        color: #000000;
+        padding: 10px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.3s ease;
+        margin-bottom: 40px;
+      }
+
+      .read-more-btn:hover {
+        background-color: #fff;
+        color: #0b1726;
+      }
+
+      .read-more-btn .arrow {
+        margin-left: 10px;
+      }
+      .read-more-btn-dri {
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        padding: 10px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.3s ease;
+        margin-bottom: 40px;
+      }
+
+      .read-more-btn-dri:hover {
+        background-color: #fff;
+        color: #ffffff;
+      }
+
+      .read-more-btn-dri .arrow {
+        margin-left: 10px;
+      }
+      .footer-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 25px;
+      }
+
+      .contact-info,
+      .quick-links {
+        color: #b0b7c3;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      .quick-links-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .quick-links-list li {
+        margin-bottom: 15px;
+      }
+
+      .quick-links-list a {
+        color: #b0b7c3;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .quick-links-list a:hover {
+        color: #fff;
+      }
+
+      .quick-links-list .arrow {
+        color: #b0b7c3;
+        margin-right: 10px;
+        font-size: 12px;
+      }
+
+      .social-icons {
+        margin-top: 25px;
+      }
+
+      .social-icons a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        background-color: #fff;
+        color: #0b1726;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        background-color: #f0f0f0;
+        transform: translateY(-3px);
+      }
+
+      .newsletter-form {
+        margin-top: 20px;
+      }
+
+      .newsletter-form .form-control {
+        background-color: transparent;
+        border: 1px solid #314259;
+        border-radius: 5px;
+        color: #fff;
+        padding: 12px 15px;
+      }
+
+      .newsletter-form .form-control::placeholder {
+        color: #5d7290;
+      }
+
+      .newsletter-form .form-control:focus {
+        box-shadow: none;
+        border-color: #fff;
+      }
+
+      .copyright {
+        padding: 20px;
+        color: #ffffff;
+        font-size: 14px;
+        text-align: center;
+      }
+      @media (max-width: 1440px) {
+        .mockup-container {
+          right: -10%;
+        }
+        .product-req-section {
+          min-height: 450px;
+        }
+        .contact-phone {
+          max-width: 500px;
+        }
+      }
+      @media (max-width: 991px) {
+        .hero-content {
+          text-align: center;
+          left: 50%;
+        }
+
+        .mockup-container {
+          margin-top: 30px;
+          margin-bottom: 40px;
+        }
+        .mockup-container {
+          display: none;
+        }
+        .hero-section {
+          background-image: url(./image/bg-visa-1.svg);
+          height: 400px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .footer-section {
+          padding: 50px 0 0px;
+        }
+        .hero-title {
+          font-size: 22px;
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+        .main-heading {
+          font-size: 28px;
+        }
+
+        .footer-title {
+          margin-top: 30px;
+        }
+
+        .card-blog {
+          margin-bottom: 30px;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .testimonial-card {
+          padding: 1.5rem 1rem;
+        }
+
+        .partners-container {
+          overflow-x: auto;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+          /* Firefox */
+          -ms-overflow-style: none;
+          /* IE and Edge */
+        }
+
+        .contact-phone {
+          display: none;
+        }
+
+        .partners-container::-webkit-scrollbar {
+          display: none;
+          /* Chrome, Safari and Opera */
+        }
+
+        .hero-title {
+          font-size: 1.8rem;
+          line-height: 1.3;
+        }
+
+        .app-screenshot {
+          max-width: 50%;
+          height: auto;
+        }
+
+        .phone-small {
+          width: 150px;
+          left: 10%;
+        }
+
+        .phone-large {
+          width: 180px;
+          left: 30%;
+        }
+
+        .phones-container {
+          height: 330px;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+
+        .card {
+          padding: 1.5rem;
+        }
+
+        .service-title {
+          font-size: 1rem;
+        }
+
+        .service-text {
+          font-size: 0.8rem;
+        }
+
+        .read-more {
+          font-size: 0.7rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero-title {
+          font-size: 1.5rem;
+          line-height: 1.4;
+        }
+      }
+    </style>
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container my-5">
+      <!-- Hero Section -->
+      <div class="gradient-bg mb-5" data-aos="fade-up">
+        <div class="container py-4 px-5">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <h1 class="hero-title mb-4">
+                Learn How to Quickly Generate Placehder Text Using a Lorem Ipsum
+                Tool
+              </h1>
+              <p class="hero-text">
+                For over a decade, we've helped startups, nonprofits, and
+                corporations build, ship, and launch products that scale their
+                businesses
+              </p>
+            </div>
+            <div class="col-lg-6 robot-container">
+              <div class="circle-bg"></div>
+              <img
+                src="./image/robo.gif"
+                alt="Robot illustration"
+                class="img-fluid"
+                style="
                   max-height: 400px;
                   object-fit: contain;
                   position: relative;
                   z-index: 2;
-                " />
+                "
+              />
+            </div>
+          </div>
+
+          <!-- Partners Section -->
+          <div class="partners-container">
+            <img
+              src="./image/icon-1-header.svg"
+              alt="Partner 1"
+              class="partner-logo"
+            />
+            <img
+              src="./image/icon-2-header.svg"
+              alt="Partner 2"
+              class="partner-logo"
+            />
+            <img
+              src="./image/icon-3-header.svg"
+              alt="Partner 3"
+              class="partner-logo"
+            />
+            <img
+              src="./image/icon-4-header.svg"
+              alt="Partner 4"
+              class="partner-logo"
+            />
+            <img
+              src="./image/icon-5-header.svg"
+              alt="Partner 5"
+              class="partner-logo"
+            />
+            <img
+              src="./image/icon-6-header.svg"
+              alt="Partner 6"
+              class="partner-logo"
+            />
+            <img
+              src="./image/icon-7-header.svg"
+              alt="Partner 7"
+              class="partner-logo"
+            />
+            <img
+              src="./image/icon-8-header.svg"
+              alt="Partner 8"
+              class="partner-logo"
+            />
           </div>
         </div>
+      </div>
 
-        <!-- Partners Section -->
-        <div class="partners-container">
-          <img src="./image/icon-1-header.svg" alt="Partner 1" class="partner-logo" />
-          <img src="./image/icon-2-header.svg" alt="Partner 2" class="partner-logo" />
-          <img src="./image/icon-3-header.svg" alt="Partner 3" class="partner-logo" />
-          <img src="./image/icon-4-header.svg" alt="Partner 4" class="partner-logo" />
-          <img src="./image/icon-5-header.svg" alt="Partner 5" class="partner-logo" />
-          <img src="./image/icon-6-header.svg" alt="Partner 6" class="partner-logo" />
-          <img src="./image/icon-7-header.svg" alt="Partner 7" class="partner-logo" />
-          <img src="./image/icon-8-header.svg" alt="Partner 8" class="partner-logo" />
+      <!-- Stats Section -->
+      <h2 class="section-title-section-2" data-aos="fade-up">
+        Learn How to Quickly Generate
+      </h2>
+
+      <div class="row stats-row g-4" data-aos="fade-up">
+        <div class="col-md-3">
+          <div class="stats-card blue">
+            <div class="stats-number">400+</div>
+            <div class="stats-text">Worldwide Clients</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card pink">
+            <div class="stats-number">2 M+</div>
+            <div class="stats-text">Professional Staffs</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card green">
+            <div class="stats-number">16 k+</div>
+            <div class="stats-text">Project worldwide</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stats-card yellow">
+            <div class="stats-number">95 %</div>
+            <div class="stats-text">Star Rated Reviews</div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Stats Section -->
-    <h2 class="section-title-section-2" data-aos="fade-up">Learn How to Quickly Generate</h2>
+      <div class="case-study-section" data-aos="fade-up">
+        <h2 class="section-title-section-2">Made by TheApp4U</h2>
 
-    <div class="row stats-row g-4" data-aos="fade-up">
-      <div class="col-md-3">
-        <div class="stats-card blue">
-          <div class="stats-number">400+</div>
-          <div class="stats-text">Worldwide Clients</div>
+        <div class="case-study-card">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <img
+                src="./image/icon-logo-the-app.svg"
+                alt="OTU Logo"
+                class="case-study-logo"
+              />
+              <h3 class="case-study-heading">Text Using a Lorem Ipsum Tool</h3>
+              <p class="case-study-text">
+                Reference site about Lorem Ipsum, giving information on its
+                origins, as well as a random Lorem generator, giving information
+                on its origins, as well as a random Lorem generator, giving
+                information on its origins, as well as a random Lorem generator,
+                giving information on its origins, as well as a random Lorem
+                generator.
+              </p>
+              <button class="case-study-btn">
+                Read the case study
+                <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
+              </button>
+            </div>
+            <div class="col-lg-6">
+              <div class="phones-container">
+                <!-- Background phone (smaller) -->
+                <img
+                  src="./image//phone-small-the-app.svg"
+                  alt="Mobile App Screenshot Background"
+                  class="phone-small"
+                />
+
+                <!-- Foreground phone (larger) -->
+                <img
+                  src="./image//phone-big-the-app.svg"
+                  alt="Mobile App Screenshot Foreground"
+                  class="phone-large"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="stats-card pink">
-          <div class="stats-number">2 M+</div>
-          <div class="stats-text">Professional Staffs</div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="stats-card green">
-          <div class="stats-number">16 k+</div>
-          <div class="stats-text">Project worldwide</div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="stats-card yellow">
-          <div class="stats-number">95 %</div>
-          <div class="stats-text">Star Rated Reviews</div>
-        </div>
-      </div>
-    </div>
+      <div class="case-study-section" data-aos="fade-up">
+        <div class="case-study-card">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <img
+                src="./image/icon-logo-the-app.svg"
+                alt="OTU Logo"
+                class="case-study-logo"
+              />
+              <h3 class="case-study-heading">Text Using a Lorem Ipsum Tool</h3>
+              <p class="case-study-text">
+                Reference site about Lorem Ipsum, giving information on its
+                origins, as well as a random Lorem generator, giving information
+                on its origins, as well as a random Lorem generator, giving
+                information on its origins, as well as a random Lorem generator,
+                giving information on its origins, as well as a random Lorem
+                generator.
+              </p>
+              <button class="case-study-btn">
+                Read the case study
+                <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
+              </button>
+            </div>
+            <div class="col-lg-6">
+              <div class="phones-container">
+                <!-- Background phone (smaller) -->
+                <img
+                  src="./image//phone-small-the-app.svg"
+                  alt="Mobile App Screenshot Background"
+                  class="phone-small"
+                />
 
-    <div class="case-study-section" data-aos="fade-up">
-      <h2 class="section-title-section-2">Made by TheApp4U</h2>
+                <!-- Foreground phone (larger) -->
+                <img
+                  src="./image//phone-big-the-app.svg"
+                  alt="Mobile App Screenshot Foreground"
+                  class="phone-large"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="case-study-section" data-aos="fade-up">
+        <div class="case-study-card">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <img
+                src="./image/icon-logo-the-app.svg"
+                alt="OTU Logo"
+                class="case-study-logo"
+              />
+              <h3 class="case-study-heading">Text Using a Lorem Ipsum Tool</h3>
+              <p class="case-study-text">
+                Reference site about Lorem Ipsum, giving information on its
+                origins, as well as a random Lorem generator, giving information
+                on its origins, as well as a random Lorem generator, giving
+                information on its origins, as well as a random Lorem generator,
+                giving information on its origins, as well as a random Lorem
+                generator.
+              </p>
+              <button class="case-study-btn">
+                Read the case study
+                <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
+              </button>
+            </div>
+            <div class="col-lg-6">
+              <div class="phones-container">
+                <!-- Background phone (smaller) -->
+                <img
+                  src="./image//phone-small-the-app.svg"
+                  alt="Mobile App Screenshot Background"
+                  class="phone-small"
+                />
 
-      <div class="case-study-card">
+                <!-- Foreground phone (larger) -->
+                <img
+                  src="./image//phone-big-the-app.svg"
+                  alt="Mobile App Screenshot Foreground"
+                  class="phone-large"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product Requirements Document Section -->
+      <div class="product-req-section" data-aos="fade-up">
         <div class="row align-items-center">
-          <div class="col-lg-6">
-            <img src="./image/icon-logo-the-app.svg" alt="OTU Logo" class="case-study-logo" />
-            <h3 class="case-study-heading">Text Using a Lorem Ipsum Tool</h3>
-            <p class="case-study-text">
-              Reference site about Lorem Ipsum, giving information on its
-              origins, as well as a random Lorem generator, giving information
-              on its origins, as well as a random Lorem generator, giving
-              information on its origins, as well as a random Lorem generator,
-              giving information on its origins, as well as a random Lorem
-              generator.
-            </p>
-            <button class="case-study-btn">
-              Read the case study
-              <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
-            </button>
+          <div class="col-md-8">
+            <h2 class="product-req-title">
+              <span>Product</span>
+              <span>Requirements</span>
+              <span>Document</span>
+            </h2>
+            <a href="#" class="read-more-btn">
+              Read More
+              <span class="arrow">→</span>
+            </a>
           </div>
-          <div class="col-lg-6">
-            <div class="phones-container">
-              <!-- Background phone (smaller) -->
-              <img src="./image//phone-small-the-app.svg" alt="Mobile App Screenshot Background" class="phone-small" />
-
-              <!-- Foreground phone (larger) -->
-              <img src="./image//phone-big-the-app.svg" alt="Mobile App Screenshot Foreground" class="phone-large" />
-            </div>
+          <div class="col-md-4 text-center card-product-req">
+            <img
+              src="./image/mobile-app-contact-img 1.svg"
+              alt="Contact us screen"
+              class="contact-phone"
+            />
           </div>
         </div>
       </div>
-    </div>
-    <div class="case-study-section" data-aos="fade-up">
-      <div class="case-study-card">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <img src="./image/icon-logo-the-app.svg" alt="OTU Logo" class="case-study-logo" />
-            <h3 class="case-study-heading">Text Using a Lorem Ipsum Tool</h3>
-            <p class="case-study-text">
-              Reference site about Lorem Ipsum, giving information on its
-              origins, as well as a random Lorem generator, giving information
-              on its origins, as well as a random Lorem generator, giving
-              information on its origins, as well as a random Lorem generator,
-              giving information on its origins, as well as a random Lorem
-              generator.
-            </p>
-            <button class="case-study-btn">
-              Read the case study
-              <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
-            </button>
-          </div>
-          <div class="col-lg-6">
-            <div class="phones-container">
-              <!-- Background phone (smaller) -->
-              <img src="./image//phone-small-the-app.svg" alt="Mobile App Screenshot Background" class="phone-small" />
 
-              <!-- Foreground phone (larger) -->
-              <img src="./image//phone-big-the-app.svg" alt="Mobile App Screenshot Foreground" class="phone-large" />
+      <section class="services-section" data-aos="fade-up">
+        <div class="row g-4">
+          <!-- Heading Card -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card-services heading-card">
+              <h1 class="section-title-provider">
+                Provide High Quality Data-Driven Service for IT Industry
+              </h1>
+              <a href="#" class="case-study-btn-provider" style="font-weight: 700;">
+                Read the case study
+                <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
+              </a>
             </div>
           </div>
+
+          <!-- Service Card 1 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card-services service-card pink">
+              <div class="service-icon pink">
+                <img src="./image/icon-services-1.svg" alt="Service 01" />
+              </div>
+              <h3 class="service-title">Service 01</h3>
+              <p class="service-text">
+                Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
+                Eripiut Est An. An Quo
+              </p>
+              <a href="#" class="read-more">
+                READ MORE
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card-services service-card green">
+              <div class="service-icon green">
+                <img src="./image/icon-services-2.svg" alt="Service 01" />
+              </div>
+              <h3 class="service-title">Service 01</h3>
+              <p class="service-text">
+                Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
+                Eripiut Est An. An Quo
+              </p>
+              <a href="#" class="read-more">
+                READ MORE
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card-services service-card green">
+              <div class="service-icon green">
+                <img src="./image/icon-services-3.svg" alt="Service 01" />
+              </div>
+              <h3 class="service-title">Service 01</h3>
+              <p class="service-text">
+                Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
+                Eripiut Est An. An Quo
+              </p>
+              <a href="#" class="read-more">
+                READ MORE
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card-services service-card blue">
+              <div class="service-icon blue">
+                <img src="./image/icon-services-4.svg" alt="Service 01" />
+              </div>
+              <h3 class="service-title">Service 01</h3>
+              <p class="service-text">
+                Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
+                Eripiut Est An. An Quo
+              </p>
+              <a href="#" class="read-more">
+                READ MORE
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div class="col-md-4 col-sm-6">
+            <div class="card-services service-card pink">
+              <div class="service-icon pink">
+                <img src="./image/icon-services-5.svg" alt="Service 01" />
+              </div>
+              <h3 class="service-title">Service 01</h3>
+              <p class="service-text">
+                Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
+                Eripiut Est An. An Quo
+              </p>
+              <a href="#" class="read-more">
+                READ MORE
+                <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="testimonial-section" data-aos="fade-up">
+      <h2 class="section-title-section-2">
+        What They Say About <br />
+        Our Service
+      </h2>
+
+      <!-- Swiper Slider -->
+      <div class="swiper testimonialSwiper">
+        <div class="swiper-wrapper">
+          <!-- Testimonial 1 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-top">
+                <div class="testimonial-quote">
+                  <div><img src="./image/“.svg" alt="quote-icon" /></div>
+                </div>
+                <div class="testimonial-stars">
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                </div>
+              </div>
+
+              <p class="testimonial-text">
+                Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
+                Since The 1500s, When An Unknown Printer&orem Ipsum Has Been The
+                Industry's
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="./image/avatar.svg"
+                  alt="Bodrum Salvador"
+                  class="author-avatar"
+                />
+                <div class="author-info">
+                  <span class="author-name">Bodrum Salvador</span>
+                  <span class="author-title">Product Designer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-top">
+                <div class="testimonial-quote">
+                  <div><img src="./image/“.svg" alt="quote-icon" /></div>
+                </div>
+                <div class="testimonial-stars">
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
+                Since The 1500s, When An Unknown Printer&orem Ipsum Has Been The
+                Industry's
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="./image/avatar.svg"
+                  alt="Bodrum Salvador"
+                  class="author-avatar"
+                />
+                <div class="author-info">
+                  <span class="author-name">Bodrum Salvador</span>
+                  <span class="author-title">Product Designer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-top">
+                <div class="testimonial-quote">
+                  <div><img src="./image/“.svg" alt="quote-icon" /></div>
+                </div>
+                <div class="testimonial-stars">
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
+                Since The 1500s, When An Unknown Printer&orem Ipsum Has Been The
+                Industry's
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="./image/avatar.svg"
+                  alt="Bodrum Salvador"
+                  class="author-avatar"
+                />
+                <div class="author-info">
+                  <span class="author-name">Bodrum Salvador</span>
+                  <span class="author-title">Product Designer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-top">
+                <div class="testimonial-quote">
+                  <div><img src="./image/“.svg" alt="quote-icon" /></div>
+                </div>
+                <div class="testimonial-stars">
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                  <span><img src="./image/start.svg" alt="star" /></span>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
+                Since The 1500s, When An Unknown Printer&orem Ipsum Has Been The
+                Industry's
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="./image/avatar.svg"
+                  alt="Bodrum Salvador"
+                  class="author-avatar"
+                />
+                <div class="author-info">
+                  <span class="author-name">Bodrum Salvador</span>
+                  <span class="author-title">Product Designer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination dots -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <div class="hero-section" data-aos="fade-up">
+      <div class="hero-content">
+        <h1 class="hero-title">Driving Future-Ready Success</h1>
+        <a href="#" class="">
+          <img
+            src="./image/btn-see-more-f.svg"
+            alt="Arrow Right"
+            style="margin-bottom: 30px"
+          />
+        </a>
+      </div>
+      <div class="mockup-container">
+        <div class="phone-mockup">
+          <!-- <img src="./image/Img-2 1.svg" alt="App Interface Mockup" /> -->
         </div>
       </div>
     </div>
-    <div class="case-study-section" data-aos="fade-up">
-      <div class="case-study-card">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <img src="./image/icon-logo-the-app.svg" alt="OTU Logo" class="case-study-logo" />
-            <h3 class="case-study-heading">Text Using a Lorem Ipsum Tool</h3>
-            <p class="case-study-text">
-              Reference site about Lorem Ipsum, giving information on its
-              origins, as well as a random Lorem generator, giving information
-              on its origins, as well as a random Lorem generator, giving
-              information on its origins, as well as a random Lorem generator,
-              giving information on its origins, as well as a random Lorem
-              generator.
-            </p>
-            <button class="case-study-btn">
-              Read the case study
-              <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
-            </button>
-          </div>
-          <div class="col-lg-6">
-            <div class="phones-container">
-              <!-- Background phone (smaller) -->
-              <img src="./image//phone-small-the-app.svg" alt="Mobile App Screenshot Background" class="phone-small" />
+    <section class="blog-section container" data-aos="fade-up">
+      <div class="container">
+        <h2 class="section-title-section-2">
+          Learn from our Digital<br />Product Agency
+        </h2>
 
-              <!-- Foreground phone (larger) -->
-              <img src="./image//phone-big-the-app.svg" alt="Mobile App Screenshot Foreground" class="phone-large" />
+        <div class="row">
+          <!-- Article 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card-blog h-100">
+              <div class="card-img-container">
+                <img
+                  src="./image/blog-2.svg"
+                  class="card-img-top"
+                  alt="Team collaboration"
+                />
+                <div class="date-badge">
+                  <div class="date-badge-text">22</div>
+                  <div class="date-badge-text">May</div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="category">KNOWLEDGE</div>
+                <h5 class="card-title">An Quodo Lorem Labortis Ull Corper.</h5>
+                <p class="card-text">
+                  Enim Animal Cons Incorrupte, De Serum Et Princip Deos, Virut
+                  De Eripuit Est An. An Quodo Lorem Labortis Ull Corper.
+                </p>
+                <a href="#" class="read-more-card-s4">
+                  READ MORE
+                  <img
+                    src="./image/row.svg"
+                    alt="Arrow Right"
+                    class="arrow-right-card-s4"
+                  />
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <!-- Product Requirements Document Section -->
-    <div class="product-req-section" data-aos="fade-up">
-      <div class="row align-items-center">
-        <div class="col-md-8">
-          <h2 class="product-req-title">
-            <span>Product</span>
-            <span>Requirements</span>
-            <span>Document</span>
-          </h2>
-          <a href="#" class="read-more-btn">
-            Read More
-            <span class="arrow">→</span>
-          </a>
-        </div>
-        <div class="col-md-4 text-center card-product-req">
-          <img src="./image/mobile-app-contact-img 1.svg" alt="Contact us screen" class="contact-phone" />
-        </div>
-      </div>
-    </div>
 
-    <section class="services-section" data-aos="fade-up">
-      <div class="row g-4">
-        <!-- Heading Card -->
-        <div class="col-md-4 col-sm-6">
-          <div class="card-services heading-card">
-            <h1 class="section-title-provider">
-              Provide High Quality Data-Driven Service for IT Industry
-            </h1>
-            <a href="#" class="case-study-btn">
-              Read the case study
-              <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
-            </a>
-          </div>
-        </div>
-
-        <!-- Service Card 1 -->
-        <div class="col-md-4 col-sm-6">
-          <div class="card-services service-card pink">
-            <div class="service-icon pink">
-              <img src="./image/icon-services-1.svg" alt="Service 01" />
+          <!-- Article 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card-blog h-100">
+              <div class="card-img-container">
+                <img
+                  src="./image/blog-1.svg"
+                  class="card-img-top"
+                  alt="Laptop with website design"
+                />
+                <div class="date-badge">
+                  <div class="date-badge-text">22</div>
+                  <div class="date-badge-text">May</div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="category">KNOWLEDGE</div>
+                <h5 class="card-title">An Quodo Lorem Labortis Ull Corper.</h5>
+                <p class="card-text">
+                  Enim Animal Cons Incorrupte, De Serum Et Princip Deos, Virut
+                  De Eripuit Est An. An Quodo Lorem Labortis Ull Corper.
+                </p>
+                <a href="#" class="read-more-card-s4">
+                  READ MORE
+                  <img
+                    src="./image/row.svg"
+                    alt="Arrow Right"
+                    class="arrow-right-card-s4"
+                  />
+                </a>
+              </div>
             </div>
-            <h3 class="service-title">Service 01</h3>
-            <p class="service-text">
-              Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
-              Eripiut Est An. An Quo
-            </p>
-            <a href="#" class="read-more">
-              READ MORE
-              <span class="arrow">→</span>
-            </a>
           </div>
-        </div>
 
-        <!-- Service Card 2 -->
-        <div class="col-md-4 col-sm-6">
-          <div class="card-services service-card green">
-            <div class="service-icon green">
-              <img src="./image/icon-services-2.svg" alt="Service 01" />
+          <!-- Article 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card-blog h-100">
+              <div class="card-img-container">
+                <img
+                  src="./image/blog-3.svg"
+                  class="card-img-top"
+                  alt="Business woman smiling"
+                />
+                <div class="date-badge">
+                  <div class="date-badge-text">22</div>
+                  <div class="date-badge-text">May</div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="category">KNOWLEDGE</div>
+                <h5 class="card-title">An Quodo Lorem Labortis Ull Corper.</h5>
+                <p class="card-text">
+                  Enim Animal Cons Incorrupte, De Serum Et Princip Deos, Virut
+                  De Eripuit Est An. An Quodo Lorem Labortis Ull Corper.
+                </p>
+                <a href="#" class="read-more-card-s4">
+                  READ MORE
+                  <img
+                    src="./image/row.svg"
+                    alt="Arrow Right"
+                    class="arrow-right-card-s4"
+                  />
+                </a>
+              </div>
             </div>
-            <h3 class="service-title">Service 01</h3>
-            <p class="service-text">
-              Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
-              Eripiut Est An. An Quo
-            </p>
-            <a href="#" class="read-more">
-              READ MORE
-              <span class="arrow">→</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Service Card 3 -->
-        <div class="col-md-4 col-sm-6">
-          <div class="card-services service-card green">
-            <div class="service-icon green">
-              <img src="./image/icon-services-3.svg" alt="Service 01" />
-            </div>
-            <h3 class="service-title">Service 01</h3>
-            <p class="service-text">
-              Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
-              Eripiut Est An. An Quo
-            </p>
-            <a href="#" class="read-more">
-              READ MORE
-              <span class="arrow">→</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Service Card 4 -->
-        <div class="col-md-4 col-sm-6">
-          <div class="card-services service-card blue">
-            <div class="service-icon blue">
-              <img src="./image/icon-services-4.svg" alt="Service 01" />
-            </div>
-            <h3 class="service-title">Service 01</h3>
-            <p class="service-text">
-              Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
-              Eripiut Est An. An Quo
-            </p>
-            <a href="#" class="read-more">
-              READ MORE
-              <span class="arrow">→</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Service Card 5 -->
-        <div class="col-md-4 col-sm-6">
-          <div class="card-services service-card pink">
-            <div class="service-icon pink">
-              <img src="./image/icon-services-5.svg" alt="Service 01" />
-            </div>
-            <h3 class="service-title">Service 01</h3>
-            <p class="service-text">
-              Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
-              Eripiut Est An. An Quo
-            </p>
-            <a href="#" class="read-more">
-              READ MORE
-              <span class="arrow">→</span>
-            </a>
           </div>
         </div>
       </div>
     </section>
-    
-
-  </div>
-  <section class="testimonial-section" data-aos="fade-up">
-    <h2 class="section-title-section-2">What They Say About Our Service</h2>
-
-    <!-- Swiper Slider -->
-    <div class="swiper testimonialSwiper">
-      <div class="swiper-wrapper">
-        <!-- Testimonial 1 -->
-        <div class="swiper-slide">
-          <div class="testimonial-card">
-            <div class="rating">
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
-            </div>
-            <div class="quote-icon">"</div>
-            <div class="card-divider"></div>
-            <p class="testimonial-text">
-              Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
-              Since The 1500s, When An Unknown Printer&orem Ipsum Has Been
-              The Industry's
+    <footer class="footer-section" data-aos="fade-up">
+      <div class="container">
+        <!-- Main Content -->
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="main-heading">
+              Let's develop something awesome together.
+            </h1>
+            <p class="description">
+              We've helped a variety of organizations, from FinTech to
+              nonprofit, launch, scale, and succeed. Check out all we do—and
+              check out what we can do for you. A deep understanding of your
+              industry is required to create successful products. What sets us
+              apart is our ability to learn and understand the ecosystem in
+              which you operate.
             </p>
-            <div class="testimonial-author">
-              <img src="./image/avatar.svg" alt="Bodrum Salvador" class="author-avatar" />
-              <div class="author-info">
-                <span class="author-name">Bodrum Salvador</span>
-                <span class="author-title">Product Designer</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div class="swiper-slide">
-          <div class="testimonial-card">
-            <div class="rating">
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
-            </div>
-            <div class="quote-icon">"</div>
-            <div class="card-divider"></div>
-            <p class="testimonial-text">
-              Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
-              Since The 1500s, When An Unknown Printer&orem Ipsum Has Been
-              The Industry's
-            </p>
-            <div class="testimonial-author">
-              <img src="./image/avatar.svg" alt="Bodrum Salvador" class="author-avatar" />
-              <div class="author-info">
-                <span class="author-name">Bodrum Salvador</span>
-                <span class="author-title">Product Designer</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="swiper-slide">
-          <div class="testimonial-card">
-            <div class="rating">
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
-            </div>
-            <div class="quote-icon">"</div>
-            <div class="card-divider"></div>
-            <p class="testimonial-text">
-              Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
-              Since The 1500s, When An Unknown Printer&orem Ipsum Has Been
-              The Industry's
-            </p>
-            <div class="testimonial-author">
-              <img src="./image/avatar.svg" alt="Bodrum Salvador" class="author-avatar" />
-              <div class="author-info">
-                <span class="author-name">Bodrum Salvador</span>
-                <span class="author-title">Product Designer</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 4 -->
-        <div class="swiper-slide">
-          <div class="testimonial-card">
-            <div class="rating">
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
-              <span>★</span>
-            </div>
-            <div class="quote-icon">"</div>
-            <div class="card-divider"></div>
-            <p class="testimonial-text">
-              Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever
-              Since The 1500s, When An Unknown Printer&orem Ipsum Has Been
-              The Industry's
-            </p>
-            <div class="testimonial-author">
-              <img src="./image/avatar.svg" alt="Bodrum Salvador" class="author-avatar" />
-              <div class="author-info">
-                <span class="author-name">Bodrum Salvador</span>
-                <span class="author-title">Product Designer</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pagination dots -->
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-
-  <section class="hero-section" data-aos="fade-up">
-          <div class="hero-content">
-            <h1 class="hero-title">Driving Future-Ready Success</h1>
-            <a href="#" class="btn read-more-btn">
-              Read More
-              <span class="arrow-icon">→</span>
+            <a href="#" class="">
+              <img
+                src="./image/btn-see-more-f.svg"
+                alt="Arrow Right"
+                style="margin-bottom: 30px"
+              />
             </a>
-    </div>
-    <div class="mockup-container">
-      <div class="phone-mockup">
-        <img src="./image/Img-2 1.svg" alt="App Interface Mockup" />
-      </div>
-    </div>
-  </section>
-  <section class="blog-section container" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title">
-        Learn from our Digital<br />Product Agency
-      </h2>
-
-      <div class="row">
-        <!-- Article 1 -->
-        <div class="col-md-4 mb-4">
-          <div class="card-blog h-100">
-            <div class="card-img-container">
-              <img src="./image/blog-2.svg" class="card-img-top" alt="Team collaboration" />
-              <div class="date-badge">
-                <div class="day">22</div>
-                <div class="month">May</div>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="category">KNOWLEDGE</div>
-              <h5 class="card-title">
-                An Quodo Lorem Labortis Ull Corper.
-              </h5>
-              <p class="card-text">
-                Enim Animal Cons Incorrupte, De Serum Et Princip Deos, Virut
-                De Eripuit Est An. An Quodo Lorem Labortis Ull Corper.
-              </p>
-              <a href="#" class="read-more">
-                READ MORE
-                <span class="arrow">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Article 2 -->
-        <div class="col-md-4 mb-4">
-          <div class="card-blog h-100">
-            <div class="card-img-container">
-              <img src="./image/blog-1.svg" class="card-img-top" alt="Laptop with website design" />
-              <div class="date-badge">
-                <div class="day">22</div>
-                <div class="month">May</div>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="category">KNOWLEDGE</div>
-              <h5 class="card-title">
-                An Quodo Lorem Labortis Ull Corper.
-              </h5>
-              <p class="card-text">
-                Enim Animal Cons Incorrupte, De Serum Et Princip Deos, Virut
-                De Eripuit Est An. An Quodo Lorem Labortis Ull Corper.
-              </p>
-              <a href="#" class="read-more">
-                READ MORE
-                <span class="arrow">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Article 3 -->
-        <div class="col-md-4 mb-4">
-          <div class="card-blog h-100">
-            <div class="card-img-container">
-              <img src="./image/blog-3.svg" class="card-img-top" alt="Business woman smiling" />
-              <div class="date-badge">
-                <div class="day">22</div>
-                <div class="month">May</div>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="category">KNOWLEDGE</div>
-              <h5 class="card-title">
-                An Quodo Lorem Labortis Ull Corper.
-              </h5>
-              <p class="card-text">
-                Enim Animal Cons Incorrupte, De Serum Et Princip Deos, Virut
-                De Eripuit Est An. An Quodo Lorem Labortis Ull Corper.
-              </p>
-              <a href="#" class="read-more">
-                READ MORE
-                <span class="arrow">→</span>
-              </a>
-            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <footer class="footer-section" data-aos="fade-up">
-    <div class="container">
-      <!-- Main Content -->
-      <div class="row">
-        <div class="col-lg-12">
-          <h1 class="main-heading">
-            Let's develop something awesome together.
-          </h1>
-          <p class="description">
-            We've helped a variety of organizations, from FinTech to
-            nonprofit, launch, scale, and succeed. Check out all we do—and
-            check out what we can do for you. A deep understanding of your
-            industry is required to create successful products. What sets us
-            apart is our ability to learn and understand the ecosystem in
-            which you operate.
-          </p>
-          <a href="#" class="read-more-btn">
-            Read More
-            <span class="arrow">→</span>
-          </a>
-        </div>
-      </div>
-
       <!-- Footer Widgets -->
-      <div class="row">
-        <!-- Contact Info -->
-        <div class="col-md-4">
-          <h4 class="footer-title">Contact Info</h4>
-          <div class="contact-info">
-            <p>
-              Enim Animal Cons Incorrupte, De Serum Et Princip Deos. Virut
-              De Eripuit Est An. An Quodo Lorem Labortis Ull Corper Enim
-              Animal Cons Incorrupte, De Serum Et Princip Deos. Virut De
-              Eripuit Est An
-            </p>
+      <div style="padding: 10px 0; border-top: 1px solid #314259">
+        <div class="container">
+          <div class="row">
+            <!-- Contact Info -->
+          <div class="col-md-4">
+            <h4 class="footer-title">Contact Info</h4>
+            <div class="contact-info">
+              <p>
+                Enim Animal Cons Incorrupte, De Serum Et Princip Deos. Virut De
+                Eripuit Est An. An Quodo Lorem Labortis Ull Corper Enim Animal
+                Cons Incorrupte, De Serum Et Princip Deos. Virut De Eripuit Est
+                An
+              </p>
+            </div>
+            <div class="social-icons">
+              <img src="./image/icon-fb.svg" alt="facebook" />
+              <img src="./image/icon-in.svg" alt="linkedin" />
+              <img src="./image/icon-p.svg" alt="pinterest" />
+            </div>
           </div>
-          <div class="social-icons">
-            <img src="./image/icon-fb.svg" alt="facebook">
-            <img src="./image/icon-in.svg" alt="linkedin">
-            <img src="./image/icon-p.svg" alt="pinterest">
-          </div>
-        </div>
 
-        <!-- Quick Links -->
-        <div class="col-md-3 offset-md-1">
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="quick-links-list">
-            <li>
-              <a href="#">
-                <span class="arrow">▶</span>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="arrow">▶</span>
-                Our Service
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="arrow">▶</span>
-                Products
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="arrow">▶</span>
-                Blogs
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="arrow">▶</span>
-                Contact Us
-              </a>
-            </li>
-          </ul>
-        </div>
+          <!-- Quick Links -->
+          <div class="col-md-3 offset-md-1">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="quick-links-list">
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                    />
+                  </svg>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                    />
+                  </svg>
+                  Our Service
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                    />
+                  </svg>
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                    />
+                  </svg>
+                  Blogs
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                    />
+                  </svg>
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
 
-        <!-- Newsletter -->
-        <div class="col-md-4">
-          <h4 class="footer-title">Join Our Newsletter</h4>
-          <div class="contact-info">
-            <p>
-              Enim Animal Cons Incorrupte, De Serum Et Princip Deos. Virut
-              De Eripuit Est An. An Quodo Lorem Labortis Ull Corper.
-            </p>
+          <!-- Newsletter -->
+          <div class="col-md-4">
+            <h4 class="footer-title">Join Our Newsletter</h4>
+            <div class="contact-info">
+              <p>
+                Enim Animal Cons Incorrupte, De Serum Et Princip Deos. <br/>Virut De
+                Eripuit Est An. An Quodo Lorem Labortis Ull Corper.
+              </p>
+            </div>
+            <div class="newsletter-form">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Email Address"
+              />
+            </div>
           </div>
-          <div class="newsletter-form">
-            <input type="email" class="form-control" placeholder="Email Address" />
           </div>
+          
         </div>
       </div>
 
       <!-- Copyright -->
-      <div class="row">
-        <div class="col-12">
+      <div style="background-color: #000">
+        <div>
           <div class="copyright">© 2023 TheApp4U. All Rights Reserved.</div>
         </div>
       </div>
-    </div>
-  </footer>
-  <!-- Bootstrap JS Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    var swiper = new Swiper(".testimonialSwiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
+    </footer>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      var swiper = new Swiper(".testimonialSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
         },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
         },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 30,
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1400: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
         },
-        1400: {
-          slidesPerView: 4,
-          spaceBetween: 30,
-        },
-      },
-    });
+      });
 
-    AOS.init({
-      duration: 1000, // Thời gian hiệu ứng (ms)
-      once: true, // Chỉ chạy một lần khi cuộn
-    });
-  </script>
-</body>
-
+      AOS.init({
+        duration: 1000, // Thời gian hiệu ứng (ms)
+        once: true, // Chỉ chạy một lần khi cuộn
+      });
+    </script>
+  </body>
 </html>
