@@ -226,6 +226,27 @@ line-height: 32px;
       margin-left: 0.5rem;
       color: #ff6633;
     }
+    .case-study-btn-main {
+      display: flex;
+      justify-content: space-between;
+      background-color: white;
+      color: #333;
+      border: 1px solid #f05528;
+      border-radius: 30px;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .case-study-btn-main:hover {
+      background-color: #f8f8f8;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .case-study-btn-main .arrow {
+      margin-left: 0.5rem;
+      color: #ff6633;
+    }
 
     .case-study-btn-provider {
       display: inline-flex;
@@ -399,11 +420,11 @@ line-height: 32px;
     }
 
     .case-study-btn {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       background-color: white;
       color: #000;
-
+      justify-content: space-between;
       border-radius: 30px;
       padding: 0.6rem 1.8rem;
       font-size: 0.9rem;
@@ -1213,10 +1234,14 @@ line-height: 32px;
               Learn How to Quickly Generate Placehder Text Using a Lorem Ipsum
               Tool
             </h1>
-            <p class="hero-text">
-              For over a decade, we've helped startups, nonprofits, and
-              corporations build, ship, and launch products that scale their
-              businesses
+            <div>
+              <button class="case-study-btn-main">
+                Read the case study
+                <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
+              </button>
+            </div>
+            <p class="hero-text" style="margin-top: 50px;">
+              We specialize in developing customized applications and software tailored to your needs. With cutting-edge technology and a team of experts, TheApp4u takes your projects to the next level.
             </p>
           </div>
           <div class="col-lg-6 robot-container">
