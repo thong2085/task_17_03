@@ -32,18 +32,20 @@
       font-size: 2.5rem;
       line-height: 1.2;
     }
+
     .hero-title-2 {
       font-weight: 700;
       font-size: 2.5rem;
       line-height: 1.2;
       margin-bottom: 30px;
     }
+
     .hero-text {
-font-family: "Be Vietnam";
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 32px; 
+      font-family: "Be Vietnam";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px;
     }
 
     .robot-container {
@@ -118,7 +120,7 @@ line-height: 32px;
       background-color: white;
       border-radius: 10px;
       padding: 1rem;
-      margin-top: 4rem;
+      margin-top: 1.625rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -206,6 +208,8 @@ line-height: 32px;
     }
 
     .case-study-btn {
+      width: 300px;
+      height: 100%;
       display: inline-flex;
       align-items: center;
       background-color: white;
@@ -215,6 +219,7 @@ line-height: 32px;
       padding: 0.5rem 1.5rem;
       font-size: 0.9rem;
       transition: all 0.3s ease;
+
     }
 
     .case-study-btn:hover {
@@ -226,6 +231,13 @@ line-height: 32px;
       margin-left: 0.5rem;
       color: #ff6633;
     }
+
+    .case-study-btn-container {
+      height: 62.6px;
+      display: flex;
+      align-items: center;
+    }
+
     .case-study-btn-main {
       display: flex;
       justify-content: space-between;
@@ -681,6 +693,7 @@ line-height: 32px;
       width: 100%;
       position: relative;
     }
+
     .hero-section-2 {
       height: max-content;
       width: 100%;
@@ -689,6 +702,7 @@ line-height: 32px;
       background: linear-gradient(285deg, #F05528 -2.36%, #F0B928 94.65%);
       position: relative;
     }
+
     .hero-content-section {
       position: absolute;
       top: 50%;
@@ -696,14 +710,16 @@ line-height: 32px;
       transform: translate(-50%, -50%);
       color: white;
     }
+
     .hero-content-section-2 {
       color: white;
-      
+
     }
+
     .hero-title {
       font-size: 42px;
       font-weight: 700;
-      
+
     }
 
     .read-more-btn {
@@ -1037,23 +1053,29 @@ line-height: 32px;
       font-size: 14px;
       text-align: center;
     }
-@media (max-width: 1640px) {
-  .hero-title-2 {
-     font-size: 1.8rem;
-     margin-bottom: 10px;
+
+    @media (max-width: 1640px) {
+      .hero-title-2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+
+      .hero-title {
+        font-size: 1.8rem;
+      }
+
+      .hero-text {
+        font-size: 16px;
+      }
     }
-    .hero-title {
-      font-size: 1.8rem;
-    }
-    .hero-text {
-      font-size: 16px;
-    }
-}
+
+
+
     @media (max-width: 1440px) {
       .mockup-container {
         right: -10%;
       }
-      
+
       .product-req-section {
         min-height: 450px;
       }
@@ -1062,20 +1084,22 @@ line-height: 32px;
         max-width: 500px;
       }
     }
+
     @media (max-width: 1360px) {
       .hero-section {
-       display: none;
+        display: none;
       }
+
       .hero-section-2 {
         display: block;
         padding: 10px;
       }
     }
-    
+
     @media (max-width: 991px) {
       .hero-content-section {
         text-align: center;
-          left: 50%;
+        left: 50%;
       }
 
       .mockup-container {
@@ -1094,15 +1118,79 @@ line-height: 32px;
     }
 
     @media (max-width: 768px) {
+
+      .hero-section-2 {
+        display: none !important;
+      }
+
+      .hero-section-2-mobile {
+        position: relative;
+        width: 400px;
+        /* Điều chỉnh kích thước tùy ý */
+        padding: 20px;
+      }
+
+      .text-content {
+        position: absolute;
+        z-index: 2;
+        /* Đảm bảo nội dung hiển thị trên hình */
+        padding: 20px;
+      }
+
+      /* Ảnh nền */
+      .image-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+
+
       .footer-section {
         padding: 50px 0 0px;
       }
 
       .container-hero {
-        padding-top: 0rem !important;
-        padding-bottom: 0rem !important;
-        padding-right: 0.2rem !important;
-        padding-left: 0.2rem !important;
+        padding: 20px !important;
+      }
+
+      .hero-title {
+        font-size: 24px;
+        line-height: 1.3;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      .circle-bg-2 {
+        max-height: 180px;
+        margin: 20px 0;
+      }
+
+      .case-study-btn-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .case-study-btn-main {
+        width: 255px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+      }
+
+      .case-study-btn {
+        width: 300px;
+        font-size: 16px;
+      }
+
+      .hero-text {
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left;
+        margin-top: 1.5625rem !important;
       }
 
       .circle-bg {
@@ -1115,9 +1203,9 @@ line-height: 32px;
       }
 
       .hero-title {
-        font-size: 22px;
+        font-size: 1.375rem !important;
         font-weight: 700;
-        
+
       }
 
       .main-heading {
@@ -1150,9 +1238,6 @@ line-height: 32px;
         /* IE and Edge */
       }
 
-      .contact-phone {
-        display: none;
-      }
 
       .partners-container::-webkit-scrollbar {
         display: none;
@@ -1192,24 +1277,90 @@ line-height: 32px;
       }
 
       .service-title {
-        font-size: 1rem;
+        font-size: 1.375rem;
       }
 
       .service-text {
+        font-size: 0.9375rem;
+      }
+
+      .hero-title-2 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      .hero-title {
+        font-size: 1.2rem;
+      }
+
+      .hero-text {
+        font-size: 14px;
+      }
+
+      .read-more {
         font-size: 0.8rem;
       }
-      .hero-title-2 {
-     font-size: 1.2rem;
-     margin-bottom: 10px;
-    }
-    .hero-title {
-      font-size: 1.2rem;
-    }
-    .hero-text {
-      font-size: 14px;
-    }
-      .read-more {
-        font-size: 0.7rem;
+
+      .read-more-btn {
+        margin-bottom: 0;
+        width: 300px;
+        height: 52px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .read-more-btn img {
+        height: 16px;
+      }
+
+      .card-product-req {
+        height: 615px;
+      }
+
+      .card-product-req img {
+        width: 100%;
+        position: relative;
+        left: 50%;
+      }
+
+      .services-section {
+        display: none;
+        /* Hide the original services section on mobile */
+      }
+
+      .services-section-mobile {
+        display: block;
+        /* Display the swiper version on mobile */
+      }
+
+      .content-blog {
+        max-height: 200px;
+        padding: 0 !important;
+        overflow: hidden;
+        height: 6rem;
+      }
+
+      .blog-section {
+        display: none;
+      }
+
+      .blog-section-mobile {
+        display: block;
+      }
+
+      .see-more {
+        display: flex;
+        justify-content: center;
+      }
+
+      .quick-links {
+        display: none;
+      }
+
+      .social-icons {
+        display: none;
       }
     }
 
@@ -1218,6 +1369,11 @@ line-height: 32px;
         font-size: 1.5rem;
         line-height: 1.4;
       } */
+    }
+
+    .robot-container-mobile {
+      text-align: center;
+      margin: 30px 0;
     }
   </style>
   <!-- AOS CSS -->
@@ -1230,24 +1386,35 @@ line-height: 32px;
     <div class="gradient-bg mb-5" data-aos="fade-up">
       <div class="container container-hero">
         <div class="row align-items-center">
-          <div class="col-lg-6">
+          <div class=" col-lg-6">
             <h1 class="hero-title mb-4">
               Learn How to Quickly Generate Placehder Text Using a Lorem Ipsum
               Tool
             </h1>
-            <div>
+
+            <!-- Robot container sẽ chỉ hiển thị trên mobile -->
+            <div class="robot-container-mobile d-lg-none">
+              <img src="./image/robot.gif" alt="Robot illustration" class="circle-bg-2" />
+            </div>
+
+            <div class="case-study-btn-container text-center text-lg-start">
               <button class="case-study-btn-main">
                 Read the case study
                 <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
               </button>
             </div>
-            <p class="hero-text" style="margin-top: 50px;">
-              We specialize in developing customized applications and software tailored to your needs. With cutting-edge technology and a team of experts, TheApp4u takes your projects to the next level.
+
+            <p class="hero-text mt-5">
+              We specialize in developing customized applications and software tailored to your needs. With cutting-edge
+              technology and a team of experts, TheApp4u takes your projects to the next level.
             </p>
           </div>
-          <div class="col-lg-6 robot-container">
-            <!-- <div class="circle-bg"></div> -->
-            <img src="./image/robot.gif" alt="Robot illustration" class="circle-bg-2" />
+
+          <!-- Robot container cho desktop -->
+          <div class="col-lg-6 d-none d-lg-block">
+            <div class="robot-container">
+              <img src="./image/robot.gif" alt="Robot illustration" class="circle-bg-2" />
+            </div>
           </div>
         </div>
 
@@ -1271,25 +1438,25 @@ line-height: 32px;
     </h2>
 
     <div class="row stats-row g-4" data-aos="fade-up">
-      <div class="col-md-3">
+      <div class="col-6 col-md-3">
         <div class="stats-card blue">
           <div class="stats-number">400+</div>
           <div class="stats-text">Worldwide Clients</div>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-6 col-md-3">
         <div class="stats-card pink">
           <div class="stats-number">2 M+</div>
           <div class="stats-text">Professional Staffs</div>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-6 col-md-3">
         <div class="stats-card green">
           <div class="stats-number">16 k+</div>
           <div class="stats-text">Project worldwide</div>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-6 col-md-3">
         <div class="stats-card yellow">
           <div class="stats-number">95 %</div>
           <div class="stats-text">Star Rated Reviews</div>
@@ -1313,10 +1480,13 @@ line-height: 32px;
               giving information on its origins, as well as a random Lorem
               generator.
             </p>
-            <button class="case-study-btn">
-              Read the case study
-              <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
-            </button>
+            <!-- Nút cho desktop view -->
+            <div class="case-study-btn-container d-none d-lg-block">
+              <button class="case-study-btn">
+                Read the case study
+                <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
+              </button>
+            </div>
           </div>
           <div class="col-lg-6">
             <div class="phones-container">
@@ -1325,6 +1495,13 @@ line-height: 32px;
 
               <!-- Foreground phone (larger) -->
               <img src="./image//phone-big-the-app.svg" alt="Mobile App Screenshot Foreground" class="phone-large" />
+            </div>
+            <!-- Nút cho mobile view -->
+            <div class="case-study-btn-container d-lg-none text-center mt-4">
+              <button class="case-study-btn">
+                Read the case study
+                <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
+              </button>
             </div>
           </div>
         </div>
@@ -1344,10 +1521,13 @@ line-height: 32px;
               giving information on its origins, as well as a random Lorem
               generator.
             </p>
-            <button class="case-study-btn">
-              Read the case study
-              <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
-            </button>
+            <!-- Nút cho desktop view -->
+            <div class="case-study-btn-container d-none d-lg-block">
+              <button class="case-study-btn">
+                Read the case study
+                <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
+              </button>
+            </div>
           </div>
           <div class="col-lg-6">
             <div class="phones-container">
@@ -1356,6 +1536,13 @@ line-height: 32px;
 
               <!-- Foreground phone (larger) -->
               <img src="./image//phone-big-the-app.svg" alt="Mobile App Screenshot Foreground" class="phone-large" />
+            </div>
+            <!-- Nút cho mobile view -->
+            <div class="case-study-btn-container d-lg-none text-center mt-4">
+              <button class="case-study-btn">
+                Read the case study
+                <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
+              </button>
             </div>
           </div>
         </div>
@@ -1375,10 +1562,13 @@ line-height: 32px;
               giving information on its origins, as well as a random Lorem
               generator.
             </p>
-            <button class="case-study-btn">
-              Read the case study
-              <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
-            </button>
+            <!-- Nút cho desktop view -->
+            <div class="case-study-btn-container d-none d-lg-block">
+              <button class="case-study-btn">
+                Read the case study
+                <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
+              </button>
+            </div>
           </div>
           <div class="col-lg-6">
             <div class="phones-container">
@@ -1387,6 +1577,13 @@ line-height: 32px;
 
               <!-- Foreground phone (larger) -->
               <img src="./image//phone-big-the-app.svg" alt="Mobile App Screenshot Foreground" class="phone-large" />
+            </div>
+            <!-- Nút cho mobile view -->
+            <div class="case-study-btn-container d-lg-none text-center mt-4">
+              <button class="case-study-btn">
+                Read the case study
+                <img src="./image/arrow.png" alt="Arrow Right" class="arrow" />
+              </button>
             </div>
           </div>
         </div>
@@ -1395,7 +1592,7 @@ line-height: 32px;
     <!-- Product Requirements Document Section -->
     <div class="product-req-section" data-aos="fade-up">
       <div class="row align-items-center">
-        <div class="col-md-4">
+        <div class="col-md-4 col-12">
           <h2 class="product-req-title">
             <span>Product Requirements Document</span>
           </h2>
@@ -1403,12 +1600,14 @@ line-height: 32px;
             Set your project up for success with a structured PRD. Our expert-designed PRD template helps you define
             your product goals, align teams, and reduce development risks.
           </p>
-          <a href="#" class="read-more-btn">
-            Download the Free Template
-            <span class="arrow">→</span>
-          </a>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="read-more-btn">
+              Download the Free Template
+              <img src="./image/arrow-black.png" alt="Arrow Right" class="arrow" />
+            </a>
+          </div>
         </div>
-        <div class="col-md-4 text-end card-product-req">
+        <div class="col-md-4 col-12 text-md-end text-center card-product-req">
           <img src="./image/mobile-app-contact-img 1.svg" alt="Contact us screen" class="contact-phone" />
         </div>
       </div>
@@ -1520,6 +1719,86 @@ line-height: 32px;
         </div>
       </div>
     </section>
+
+    <!-- Services Section Swiper for Mobile -->
+    <div class="services-section-mobile swiper d-lg-none">
+      <div class="card-services heading-card">
+        <span class="section-title-provider text-center">
+          Provide High Quality Data-Driven Service for IT Industry
+        </span>
+      </div>
+      <div class="swiper-wrapper">
+        <!-- Repeat this block for each service -->
+        <div class="swiper-slide">
+          <div class="card-services service-card pink">
+            <div class="service-icon pink">
+              <img src="./image/icon-services-1.svg" alt="Service 01" />
+            </div>
+            <h3 class="service-title">Service 01</h3>
+            <p class="service-text">
+              Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
+              Eripiut Est An. An Quo
+            </p>
+            <a href="#" class="read-more">
+              READ MORE
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card-services service-card pink">
+            <div class="service-icon pink">
+              <img src="./image/icon-services-2.svg" alt="Service 02" />
+            </div>
+            <h3 class="service-title">Service 02</h3>
+            <p class="service-text">
+              Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
+              Eripiut Est An. An Quo
+            </p>
+            <a href="#" class="read-more">
+              READ MORE
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card-services service-card pink">
+            <div class="service-icon pink">
+              <img src="./image/icon-services-3.svg" alt="Service 03" />
+            </div>
+            <h3 class="service-title">Service 03</h3>
+            <p class="service-text">
+              Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
+              Eripiut Est An. An Quo
+            </p>
+            <a href="#" class="read-more">
+              READ MORE
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card-services service-card pink">
+            <div class="service-icon pink">
+              <img src="./image/icon-services-4.svg" alt="Service 04" />
+            </div>
+            <h3 class="service-title">Service 04</h3>
+            <p class="service-text">
+              Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
+              Eripiut Est An. An Quo
+            </p>
+            <a href="#" class="read-more">
+              READ MORE
+              <span class="arrow">→</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
   </div>
   <section class="testimonial-section" data-aos="fade-up">
     <h2 class="section-title-section-2">
@@ -1535,7 +1814,7 @@ line-height: 32px;
           <div class="testimonial-card">
             <div class="testimonial-top">
               <div class="testimonial-quote">
-                <div><img src="./image/“.svg" alt="quote-icon" /></div>
+                <div><img src="./image/quote.svg" alt="quote-icon" /></div>
               </div>
               <div class="testimonial-stars">
                 <span><img src="./image/start.svg" alt="star" /></span>
@@ -1566,7 +1845,7 @@ line-height: 32px;
           <div class="testimonial-card">
             <div class="testimonial-top">
               <div class="testimonial-quote">
-                <div><img src="./image/“.svg" alt="quote-icon" /></div>
+                <div><img src="./image/quote.svg" alt="quote-icon" /></div>
               </div>
               <div class="testimonial-stars">
                 <span><img src="./image/start.svg" alt="star" /></span>
@@ -1596,7 +1875,7 @@ line-height: 32px;
           <div class="testimonial-card">
             <div class="testimonial-top">
               <div class="testimonial-quote">
-                <div><img src="./image/“.svg" alt="quote-icon" /></div>
+                <div><img src="./image/quote.svg" alt="quote-icon" /></div>
               </div>
               <div class="testimonial-stars">
                 <span><img src="./image/start.svg" alt="star" /></span>
@@ -1626,7 +1905,7 @@ line-height: 32px;
           <div class="testimonial-card">
             <div class="testimonial-top">
               <div class="testimonial-quote">
-                <div><img src="./image/“.svg" alt="quote-icon" /></div>
+                <div><img src="./image/quote.svg" alt="quote-icon" /></div>
               </div>
               <div class="testimonial-stars">
                 <span><img src="./image/start.svg" alt="star" /></span>
@@ -1682,7 +1961,7 @@ line-height: 32px;
     </div>
   </div>
   <div class="hero-section-2">
-   
+
     <div class="hero-content-section-2">
 
       <div class="hero-content">
@@ -1706,7 +1985,28 @@ line-height: 32px;
       </div>
     </div>
   </div>
-  
+
+  <div class="hero-section-2-mobile d-lg-none" data-aos="fade-up">
+    <div class="hero-content-section-2">
+      <div class="text-content">
+        <h2>Our Core Value</h2>
+        <h3>Customer First</h3>
+        <p>Build Trust & Happiness<br>Always On Time & Exceed Expectations</p>
+
+        <h3>Professional</h3>
+        <p>Punctual & Reliable<br>Work Effectively With Passion & Responsibility</p>
+
+        <h3>Cooperate & Grow Up</h3>
+        <p>Positive Attitude & Teamwork<br>Learn, Share & Support Each Other<br>Work Hard, Play Hard - No Toxic Culture
+        </p>
+      </div>
+
+      <div class="image-container">
+        <img src="./image/bg-org-2.png" alt="Core Value Background">
+      </div>
+    </div>
+  </div>
+
   </div>
 
   <div class="mockup-container">
@@ -1726,7 +2026,7 @@ line-height: 32px;
         <div class="col-md-4 mb-4">
           <div class="card-blog h-100">
             <div class="card-img-container">
-              <img src="./image/blog-2.svg" class="card-img-top" alt="Team collaboration" />
+              <img src="./image/blog-2.svg" class="card-img-top" alt="Laptop with website design" />
               <div class="date-badge">
                 <div class="date-badge-text">22</div>
                 <div class="date-badge-text">May</div>
@@ -1799,6 +2099,115 @@ line-height: 32px;
       </div>
     </div>
   </section>
+
+  <section class="blog-section-mobile container d-lg-none" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title-section-2">
+        Learn from our Digital<br />Product Agency
+      </h2>
+
+      <div class="row">
+        <!-- Article 1 -->
+        <div class="col-12 col-md-4 mb-4">
+          <div class="card-blog h-100">
+            <div class="row">
+              <div class="col-6">
+                <div class="card-img-container">
+                  <img src="./image/blog-2.svg" class="card-img-top" alt="Laptop with website design" />
+                  <div class="date-badge">
+                    <div class="date-badge-text">22</div>
+                    <div class="date-badge-text">May</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-body content-blog">
+                  <div class="category">KNOWLEDGE</div>
+                  <h5 class="card-title">An Quodo Lorem Labortis Ull Corper.</h5>
+                  <p class="card-text">
+                    Enim Animal Cons Incorrupte, De Serum Et Princip Deos, Virut
+                    De Eripuit Est An. An Quodo Lorem Labortis Ull Corper.
+                  </p>
+                  <a href="#" class="read-more-card-s4">
+                    READ MORE
+                    <img src="./image/row.svg" alt="Arrow Right" class="arrow-right-card-s4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- Article 2 -->
+        <div class="col-12 col-md-4 mb-4">
+          <div class="card-blog h-100">
+            <div class="row">
+              <div class="col-6">
+                <div class="card-img-container">
+                  <img src="./image/blog-1.svg" class="card-img-top" alt="Laptop with website design" />
+                  <div class="date-badge">
+                    <div class="date-badge-text">22</div>
+                    <div class="date-badge-text">May</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-body content-blog">
+                  <div class="category">KNOWLEDGE</div>
+                  <h5 class="card-title">An Quodo Lorem Labortis Ull Corper.</h5>
+                  <p class="card-text">
+                    Enim Animal Cons Incorrupte, De Serum Et Princip Deos, Virut
+                    De Eripuit Est An. An Quodo Lorem Labortis Ull Corper.
+                  </p>
+                  <a href="#" class="read-more-card-s4">
+                    READ MORE
+                    <img src="./image/row.svg" alt="Arrow Right" class="arrow-right-card-s4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- Article 3 -->
+        <div class="col-12 col-md-4 mb-4">
+          <div class="card-blog h-100">
+            <div class="row">
+              <div class="col-6">
+                <div class="card-img-container">
+                  <img src="./image/blog-3.svg" class="card-img-top" alt="Laptop with website design" />
+                  <div class="date-badge">
+                    <div class="date-badge-text">22</div>
+                    <div class="date-badge-text">May</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card-body content-blog">
+                  <div class="category">KNOWLEDGE</div>
+                  <h5 class="card-title">An Quodo Lorem Labortis Ull Corper.</h5>
+                  <p class="card-text">
+                    Enim Animal Cons Incorrupte, De Serum Et Princip Deos, Virut
+                    De Eripuit Est An. An Quodo Lorem Labortis Ull Corper.
+                  </p>
+                  <a href="#" class="read-more-card-s4">
+                    READ MORE
+                    <img src="./image/row.svg" alt="Arrow Right" class="arrow-right-card-s4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
   <footer class="footer-section" data-aos="fade-up">
     <div class="container">
       <!-- Main Content -->
@@ -1815,9 +2224,11 @@ line-height: 32px;
             apart is our ability to learn and understand the ecosystem in
             which you operate.
           </p>
-          <a href="#" class="">
-            <img src="./image/btn-see-more-f.svg" alt="Arrow Right" style="margin-bottom: 30px" />
-          </a>
+          <span class="see-more">
+            <a href="#">
+              <img src="./image/btn-see-more-f.svg" alt="Arrow Right" style="margin-bottom: 30px" />
+            </a>
+          </span>
         </div>
       </div>
     </div>
@@ -1844,7 +2255,7 @@ line-height: 32px;
           </div>
 
           <!-- Quick Links -->
-          <div class="col-md-3 offset-md-1">
+          <div class="col-md-3 offset-md-1 quick-links">
             <h4 class="footer-title">Quick Links</h4>
             <ul class="quick-links-list">
               <li>
@@ -1914,7 +2325,13 @@ line-height: 32px;
             </div>
           </div>
         </div>
-
+        <div class="d-flex justify-content-center mb-4 mt-4 align-items-center ">
+          <div class="social-icons-mobile d-lg-none">
+            <img src="./image/icon-fb.svg" alt="facebook" />
+            <img src="./image/icon-in.svg" alt="linkedin" />
+            <img src="./image/icon-p.svg" alt="pinterest" />
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1964,9 +2381,29 @@ line-height: 32px;
       },
     });
 
+    var swiperMobileServices = new Swiper(".services-section-mobile", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      }
+    });
+
     AOS.init({
-      duration: 1000, // Thời gian hiệu ứng (ms)
-      once: true, // Chỉ chạy một lần khi cuộn
+      duration: 1000,
+      once: true,
     });
   </script>
 </body>
